@@ -12,7 +12,7 @@
         $hasViteManifest = file_exists(public_path('build/.vite/manifest.json'));
         $hasFallbackCSS = file_exists(public_path('css/app.css'));
     @endphp
-    
+
     @if ($isProduction || !$hasViteManifest)
         {{-- Production or when Vite manifest not available --}}
         @if ($hasFallbackCSS)
