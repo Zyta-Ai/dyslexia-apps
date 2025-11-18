@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIBI - Masuk Akun</title>
-    
+
     {{-- ROBUST CSS LOADING WITH FALLBACK --}}
-    @if(file_exists(public_path('build/.vite/manifest.json')))
+    @if (file_exists(public_path('build/.vite/manifest.json')))
         @vite(['resources/css/app.css'])
     @else
         <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}">
@@ -35,7 +35,7 @@
         .button-login {
             background: #FFEFBE;
             background: linear-gradient(90deg, rgba(255, 239, 190, 1) 0%, rgba(255, 209, 102, 1) 100%);
-            color:#333333;
+            color: #333333;
             box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.4);
             cursor: pointer;
         }
