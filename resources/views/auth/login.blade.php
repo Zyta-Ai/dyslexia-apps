@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIBI - Masuk Akun</title>
-    @vite(['resources/css/app.css'])
+    
+    {{-- ROBUST CSS LOADING WITH FALLBACK --}}
+    @if(file_exists(public_path('build/.vite/manifest.json')))
+        @vite(['resources/css/app.css'])
+    @else
+        <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}">
+        <script src="https://cdn.tailwindcss.com"></script>
+    @endif
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
