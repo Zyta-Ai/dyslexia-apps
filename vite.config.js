@@ -3,6 +3,7 @@ import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
     plugins: [
+        // HANYA GUNAKAN PLUGIN LARAVEL
         laravel({
             input: [
                 'resources/css/app.css',
@@ -10,14 +11,12 @@ export default defineConfig({
             ],
             refresh: true,
         }),
+        // HAPUS tailwindcss() DI SINI UNTUK MENGHINDARI KONFLIK
     ],
     
-    // Perbaikan untuk Deployment Production (Server)
+    // Konfigurasi Tambahan untuk Deployment (Mencegah Vite Manifest Not Found)
     build: {
-        // Vite akan membuat manifest.json di public/build
         manifest: true,
-        // Vite harus tahu bahwa semua aset diakses dari root domain
-        // Ini mengatasi masalah path absolut di lingkungan server
-        base: '/', 
+        base: '/', // Memastikan path aset selalu dimulai dari root domain
     }
 });
