@@ -85,10 +85,13 @@
                             class="w-full px-4 py-3 border-0 border-dibi-teal rounded-lg focus:ring-dibi-gold focus:border-dibi-gold bg-white text-dibi-text text-lg shadow-sm leading-extra-loose">
                     </div>
 
-                    <button type="submit"
-                        class="w-full bg-dibi-teal text-white font-bold py-3 rounded-lg text-xl shadow-lg hover:opacity-90 transition duration-150 button-login">
-                        MASUK
-                    </button>
+                    <a href="/dashboard">
+                        <button type="button"
+                            class="w-full bg-dibi-teal text-white font-bold py-3 rounded-lg text-xl shadow-lg hover:opacity-90 transition duration-150 button-login">
+                            MASUK
+                        </button>
+                    </a>
+
 
                     <p class="text-center mt-4 text-dibi-text">
                         Belum punya akun? <a href="/register"
