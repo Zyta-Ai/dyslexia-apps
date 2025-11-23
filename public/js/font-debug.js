@@ -5,36 +5,36 @@
 
 window.FontDebug = {
     // Test apakah font tersedia
-    isFontAvailable: function(fontName) {
+    isFontAvailable: function (fontName) {
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
-        
+
         // Test dengan teks sample
         const testText = 'OpenDyslexic Font Test';
-        
+
         // Ukur dengan font default
         context.font = '16px serif';
         const serifWidth = context.measureText(testText).width;
-        
+
         context.font = '16px sans-serif';
         const sansWidth = context.measureText(testText).width;
-        
+
         // Ukur dengan font yang ditest
         context.font = `16px "${fontName}", serif`;
         const testWidthSerif = context.measureText(testText).width;
-        
+
         context.font = `16px "${fontName}", sans-serif`;
         const testWidthSans = context.measureText(testText).width;
-        
+
         // Font tersedia jika ukuran berbeda dari default
         return (testWidthSerif !== serifWidth) || (testWidthSans !== sansWidth);
     },
 
     // Cek semua font yang di load
-    checkAllFonts: function() {
+    checkAllFonts: function () {
         const fontsToCheck = [
             'Open Dyslexic',
-            'OpenDyslexic', 
+            'OpenDyslexic',
             'Comic Sans MS',
             'Trebuchet MS',
             'Verdana'
@@ -54,13 +54,13 @@ window.FontDebug = {
     },
 
     // Cek font yang sedang digunakan
-    getCurrentFont: function(element = document.body) {
+    getCurrentFont: function (element = document.body) {
         const style = window.getComputedStyle(element);
         return style.fontFamily;
     },
 
     // Force reload font
-    reloadFont: function(fontUrl) {
+    reloadFont: function (fontUrl) {
         // Remove existing link
         const existingLink = document.querySelector(`link[href*="${fontUrl}"]`);
         if (existingLink) {
@@ -77,7 +77,7 @@ window.FontDebug = {
     },
 
     // Test loading dari berbagai source
-    testFontSources: function() {
+    testFontSources: function () {
         const sources = [
             'https://fonts.googleapis.com/css2?family=Open+Dyslexic:wght@400;700&display=swap',
             'https://cdn.jsdelivr.net/npm/@opendyslexic/opendyslexic@1.0.3/open-dyslexic-regular.css'
@@ -101,12 +101,12 @@ window.FontDebug = {
     },
 
     // Info lengkap tentang font
-    getFullInfo: function() {
+    getFullInfo: function () {
         console.group('📊 Complete Font Information');
-        
+
         console.log('Current body font:', this.getCurrentFont());
         console.log('Font loading status:', document.body.getAttribute('data-font-loaded'));
-        
+
         if ('fonts' in document) {
             console.log('Font Loading API available: ✅');
             console.log('Loaded fonts:', Array.from(document.fonts).map(f => f.family));

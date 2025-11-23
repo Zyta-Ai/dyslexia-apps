@@ -19,7 +19,7 @@
             margin: 0;
             padding: 0;
         }
-        
+
         * {
             font-family: var(--font-primary) !important;
         }

@@ -20,7 +20,7 @@
 
     {{-- DYSLEXIC FONTS CSS --}}
     <link rel="stylesheet" href="{{ asset('css/dyslexic-fonts.css') }}">
-    
+
     {{-- FALLBACK FONT LOADING --}}
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
@@ -68,10 +68,10 @@
 <body class="antialiased bg-sky-50 text-gray-800">
     {{-- Font Loader Script --}}
     <script src="{{ asset('js/font-loader.js') }}"></script>
-    
-    @if(config('app.debug'))
-    {{-- Font Debug Script (Development Only) --}}
-    <script src="{{ asset('js/font-debug.js') }}"></script>
+
+    @if (config('app.debug'))
+        {{-- Font Debug Script (Development Only) --}}
+        <script src="{{ asset('js/font-debug.js') }}"></script>
     @endif
 
     <main>
