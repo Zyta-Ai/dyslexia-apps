@@ -30,7 +30,7 @@
             max-width: 800px;
             width: 100%;
             margin: 0 auto;
-            box-shadow: 
+            box-shadow:
                 0 20px 60px rgba(0, 0, 0, 0.2),
                 inset 0 1px 0 rgba(255, 255, 255, 0.5);
             border: 2px solid rgba(255, 255, 255, 0.3);
@@ -170,6 +170,7 @@
                 opacity: 0;
                 transform: perspective(1000px) rotateY(-30deg) scale(0.8);
             }
+
             to {
                 opacity: 1;
                 transform: perspective(1000px) rotateY(0deg) scale(1);
@@ -282,7 +283,63 @@
             <!-- Book Content -->
             <div class="book-content">
                 <p class="story-text">
-                    Di sebuah hutan tropis yang lebat dan hijau, hiduplah seekor kancil kecil yang sangat cerdik bernama Kiki. Kiki terkenal di seluruh hutan karena kepandaiannya memecahkan masalah dengan cara yang kreatif dan cerdas. Suatu hari, Kiki merasa sangat haus dan ingin minum air segar dari sungai yang mengalir jernih di pinggir hutan. Namun, ada masalah besar yang menghadang. Sungai itu dihuni oleh puluhan buaya ganas yang selalu siap memangsa siapa saja yang berani mendekati air. "Aduh, aku sangat haus, tapi bagaimana caranya sampai ke sungai tanpa dimakan buaya?" gumam Kiki sambil menggaruk kepalanya. Kiki duduk di bawah pohon besar sambil berpikir keras. Dia melihat buaya-buaya itu mengambang di permukaan air sambil menunggu mangsa. Mata mereka yang besar dan tajam selalu mengawasi sekeliling. "Hmm, pasti ada cara untuk mengakali buaya-buaya itu," pikir Kiki. Tiba-tiba, lampu kecerdikannya menyala terang. Kiki mendapat ide cemerlang yang bisa menyelamatkan nyawanya sekaligus membantunya sampai ke sungai dengan selamat. Kiki berjalan dengan percaya diri ke tepi sungai. Buaya-buaya yang melihatnya langsung tertarik dan mulai berenang mendekat. "Wah, ada makanan enak nih!" kata Bubu, buaya terbesar yang menjadi pemimpin kawanan. Namun, Kiki tidak takut sama sekali. Dengan suara yang keras dan percaya diri, Kiki berteriak, "Hai, para buaya! Aku punya kabar penting dari Raja Hutan!" Semua buaya berhenti berenang dan mendengarkan dengan penasaran. "Apa katamu, Kancil kecil?" tanya Bubu dengan nada mencurigakan. Kiki tersenyum licik dan berkata, "Raja Hutan ingin menghitung berapa jumlah kalian semua. Dia akan memberikan hadiah besar kepada kawanan buaya terbanyak di sungai ini!" Mata buaya-buaya berbinar mendengar kata 'hadiah besar'. Mereka mulai tertarik dengan tawaran Kiki. "Benarkah itu? Hadiah apa yang akan kami dapat?" tanya Cici, buaya betina yang ada di samping Bubu. "Itu rahasia! Tapi hadiahnya sangat besar dan berharga. Kalian pasti akan senang sekali," jawab Kiki dengan meyakinkan. "Tapi ada satu masalah, aku tidak bisa menghitung kalian kalau kalian berserakan seperti ini. Bisakah kalian berbaris rapi dari tepi sungai ini sampai ke seberang?" Para buaya mulai berdiskusi dengan heboh. Mereka sangat tertarik dengan hadiah yang dijanjikan Raja Hutan. "Ayo kita berbaris! Mungkin kita bisa dapat makanan berlimpah!" seru Dodo, buaya muda yang paling bersemangat. "Baiklah," kata Bubu akhirnya. "Kami akan berbaris untuk Raja Hutan. Tapi kamu harus menghitung kami satu per satu dengan benar!" Buaya-buaya mulai berbaris rapi dari satu tepi sungai ke tepi yang lain. Mereka membentuk jembatan buaya yang kokoh dan stabil. Punggung mereka yang lebar berjejer seperti batu-batu loncatan yang sempurna. Kiki hampir tidak bisa menahan tawa melihat rencananya berhasil dengan sempurna. "Baiklah, sekarang aku akan mulai menghitung. Kalian tidak boleh bergerak sama sekali supaya hitungannya tidak salah," kata Kiki sambil mulai melompat ke punggung buaya pertama. "SATU!" teriak Kiki sambil melompat ke punggung Bubu. "DUA!" lompat lagi ke buaya kedua. "TIGA!" terus ke buaya ketiga. Para buaya merasa bangga dihitung satu per satu. Mereka diam tidak bergerak sama sekali karena takut mengganggu proses penghitungan. Kiki terus melompat dari satu punggung buaya ke punggung buaya lainnya sambil berteriak angka. "EMPAT! LIMA! ENAM! TUJUH!" Kiki melompat dengan lincah dan cepat. Dia sudah hampir sampai di tengah sungai. Buaya-buaya masih tetap diam dan menunggu dengan sabar karena mengira mereka sedang dihitung untuk mendapat hadiah. "DELAPAN! SEMBILAN! SEPULUH! SEBELAS!" Kiki terus melompat dengan gembira. Air sungai yang jernih sudah semakin dekat. Dia bisa merasakan semilir angin segar dari seberang sungai. "DUA BELAS! TIGA BELAS! EMPAT BELAS! LIMA BELAS!" Kiki akhirnya sampai di punggung buaya terakhir yang berada tepat di tepi seberang. Dengan lompatan terakhir yang tinggi, Kiki berhasil mendarat dengan selamat di tepi sungai yang satunya. "ENAM BELAS! Terima kasih semuanya!" teriak Kiki sambil tertawa lepas. Kiki langsung berlari ke sungai dan minum air segar sepuasnya. Air itu terasa sangat dingin dan menyegarkan setelah perjalanan yang menegangkan. Buaya-buaya baru menyadari bahwa mereka telah ditipu ketika melihat Kiki sudah berada di seberang sungai dengan selamat. "HEI! KAMU MENIPU KAMI!" teriak Bubu dengan marah sambil menggertakkan giginya yang besar dan tajam. "MANA HADIAHNYA? MANA RAJA HUTAN?" seru para buaya lainnya dengan kesal. Kiki tersenyum lebar sambil menjawab dari seberang sungai, "Terima kasih sudah membantu aku menyeberangi sungai! Kalian memang buaya-buaya yang baik hati!" Para buaya menyadari bahwa mereka telah dijadikan jembatan oleh kancil yang cerdik itu. Meski kesal, mereka tidak bisa tidak kagum dengan kecerdikan Kiki. "Dasar kancil licik! Tapi harus aku akui, dia memang sangat pintar," gumam Bubu sambil menggelengkan kepala. "Lain kali kita harus lebih hati-hati," tambah Cici sambil kembali mengambang di air. Sejak hari itu, Kiki menjadi semakin terkenal di hutan karena berhasil mengakali buaya-buaya ganas dengan kecerdikannya. Cerita tentang bagaimana seekor kancil kecil bisa menyeberangi sungai dengan bantuan buaya-buaya itu menyebar ke seluruh hutan dan menghibur semua hewan. Para hewan lain belajar dari Kiki bahwa kecerdikan dan kreativitas bisa mengatasi masalah yang tampak tidak mungkin dipecahkan. Kiki juga belajar bahwa meskipun tipuannya berhasil, dia harus selalu berhati-hati dan tidak meremehkan lawan. Buaya-buaya akhirnya juga belajar untuk tidak mudah percaya pada janji-janji yang terlalu muluk dan selalu berpikir dua kali sebelum membantu orang asing.
+                    Di sebuah hutan tropis yang lebat dan hijau, hiduplah seekor kancil kecil yang sangat cerdik bernama
+                    Kiki. Kiki terkenal di seluruh hutan karena kepandaiannya memecahkan masalah dengan cara yang kreatif
+                    dan cerdas. Suatu hari, Kiki merasa sangat haus dan ingin minum air segar dari sungai yang mengalir
+                    jernih di pinggir hutan. Namun, ada masalah besar yang menghadang. Sungai itu dihuni oleh puluhan buaya
+                    ganas yang selalu siap memangsa siapa saja yang berani mendekati air. "Aduh, aku sangat haus, tapi
+                    bagaimana caranya sampai ke sungai tanpa dimakan buaya?" gumam Kiki sambil menggaruk kepalanya. Kiki
+                    duduk di bawah pohon besar sambil berpikir keras. Dia melihat buaya-buaya itu mengambang di permukaan
+                    air sambil menunggu mangsa. Mata mereka yang besar dan tajam selalu mengawasi sekeliling. "Hmm, pasti
+                    ada cara untuk mengakali buaya-buaya itu," pikir Kiki. Tiba-tiba, lampu kecerdikannya menyala terang.
+                    Kiki mendapat ide cemerlang yang bisa menyelamatkan nyawanya sekaligus membantunya sampai ke sungai
+                    dengan selamat. Kiki berjalan dengan percaya diri ke tepi sungai. Buaya-buaya yang melihatnya langsung
+                    tertarik dan mulai berenang mendekat. "Wah, ada makanan enak nih!" kata Bubu, buaya terbesar yang
+                    menjadi pemimpin kawanan. Namun, Kiki tidak takut sama sekali. Dengan suara yang keras dan percaya diri,
+                    Kiki berteriak, "Hai, para buaya! Aku punya kabar penting dari Raja Hutan!" Semua buaya berhenti
+                    berenang dan mendengarkan dengan penasaran. "Apa katamu, Kancil kecil?" tanya Bubu dengan nada
+                    mencurigakan. Kiki tersenyum licik dan berkata, "Raja Hutan ingin menghitung berapa jumlah kalian semua.
+                    Dia akan memberikan hadiah besar kepada kawanan buaya terbanyak di sungai ini!" Mata buaya-buaya
+                    berbinar mendengar kata 'hadiah besar'. Mereka mulai tertarik dengan tawaran Kiki. "Benarkah itu? Hadiah
+                    apa yang akan kami dapat?" tanya Cici, buaya betina yang ada di samping Bubu. "Itu rahasia! Tapi
+                    hadiahnya sangat besar dan berharga. Kalian pasti akan senang sekali," jawab Kiki dengan meyakinkan.
+                    "Tapi ada satu masalah, aku tidak bisa menghitung kalian kalau kalian berserakan seperti ini. Bisakah
+                    kalian berbaris rapi dari tepi sungai ini sampai ke seberang?" Para buaya mulai berdiskusi dengan heboh.
+                    Mereka sangat tertarik dengan hadiah yang dijanjikan Raja Hutan. "Ayo kita berbaris! Mungkin kita bisa
+                    dapat makanan berlimpah!" seru Dodo, buaya muda yang paling bersemangat. "Baiklah," kata Bubu akhirnya.
+                    "Kami akan berbaris untuk Raja Hutan. Tapi kamu harus menghitung kami satu per satu dengan benar!"
+                    Buaya-buaya mulai berbaris rapi dari satu tepi sungai ke tepi yang lain. Mereka membentuk jembatan buaya
+                    yang kokoh dan stabil. Punggung mereka yang lebar berjejer seperti batu-batu loncatan yang sempurna.
+                    Kiki hampir tidak bisa menahan tawa melihat rencananya berhasil dengan sempurna. "Baiklah, sekarang aku
+                    akan mulai menghitung. Kalian tidak boleh bergerak sama sekali supaya hitungannya tidak salah," kata
+                    Kiki sambil mulai melompat ke punggung buaya pertama. "SATU!" teriak Kiki sambil melompat ke punggung
+                    Bubu. "DUA!" lompat lagi ke buaya kedua. "TIGA!" terus ke buaya ketiga. Para buaya merasa bangga
+                    dihitung satu per satu. Mereka diam tidak bergerak sama sekali karena takut mengganggu proses
+                    penghitungan. Kiki terus melompat dari satu punggung buaya ke punggung buaya lainnya sambil berteriak
+                    angka. "EMPAT! LIMA! ENAM! TUJUH!" Kiki melompat dengan lincah dan cepat. Dia sudah hampir sampai di
+                    tengah sungai. Buaya-buaya masih tetap diam dan menunggu dengan sabar karena mengira mereka sedang
+                    dihitung untuk mendapat hadiah. "DELAPAN! SEMBILAN! SEPULUH! SEBELAS!" Kiki terus melompat dengan
+                    gembira. Air sungai yang jernih sudah semakin dekat. Dia bisa merasakan semilir angin segar dari
+                    seberang sungai. "DUA BELAS! TIGA BELAS! EMPAT BELAS! LIMA BELAS!" Kiki akhirnya sampai di punggung
+                    buaya terakhir yang berada tepat di tepi seberang. Dengan lompatan terakhir yang tinggi, Kiki berhasil
+                    mendarat dengan selamat di tepi sungai yang satunya. "ENAM BELAS! Terima kasih semuanya!" teriak Kiki
+                    sambil tertawa lepas. Kiki langsung berlari ke sungai dan minum air segar sepuasnya. Air itu terasa
+                    sangat dingin dan menyegarkan setelah perjalanan yang menegangkan. Buaya-buaya baru menyadari bahwa
+                    mereka telah ditipu ketika melihat Kiki sudah berada di seberang sungai dengan selamat. "HEI! KAMU
+                    MENIPU KAMI!" teriak Bubu dengan marah sambil menggertakkan giginya yang besar dan tajam. "MANA
+                    HADIAHNYA? MANA RAJA HUTAN?" seru para buaya lainnya dengan kesal. Kiki tersenyum lebar sambil menjawab
+                    dari seberang sungai, "Terima kasih sudah membantu aku menyeberangi sungai! Kalian memang buaya-buaya
+                    yang baik hati!" Para buaya menyadari bahwa mereka telah dijadikan jembatan oleh kancil yang cerdik itu.
+                    Meski kesal, mereka tidak bisa tidak kagum dengan kecerdikan Kiki. "Dasar kancil licik! Tapi harus aku
+                    akui, dia memang sangat pintar," gumam Bubu sambil menggelengkan kepala. "Lain kali kita harus lebih
+                    hati-hati," tambah Cici sambil kembali mengambang di air. Sejak hari itu, Kiki menjadi semakin terkenal
+                    di hutan karena berhasil mengakali buaya-buaya ganas dengan kecerdikannya. Cerita tentang bagaimana
+                    seekor kancil kecil bisa menyeberangi sungai dengan bantuan buaya-buaya itu menyebar ke seluruh hutan
+                    dan menghibur semua hewan. Para hewan lain belajar dari Kiki bahwa kecerdikan dan kreativitas bisa
+                    mengatasi masalah yang tampak tidak mungkin dipecahkan. Kiki juga belajar bahwa meskipun tipuannya
+                    berhasil, dia harus selalu berhati-hati dan tidak meremehkan lawan. Buaya-buaya akhirnya juga belajar
+                    untuk tidak mudah percaya pada janji-janji yang terlalu muluk dan selalu berpikir dua kali sebelum
+                    membantu orang asing.
                 </p>
             </div>
         </div>

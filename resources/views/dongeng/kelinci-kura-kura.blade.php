@@ -30,7 +30,7 @@
             max-width: 800px;
             width: 100%;
             margin: 0 auto;
-            box-shadow: 
+            box-shadow:
                 0 20px 60px rgba(0, 0, 0, 0.2),
                 inset 0 1px 0 rgba(255, 255, 255, 0.5);
             border: 2px solid rgba(255, 255, 255, 0.3);
@@ -170,6 +170,7 @@
                 opacity: 0;
                 transform: perspective(1000px) rotateY(-30deg) scale(0.8);
             }
+
             to {
                 opacity: 1;
                 transform: perspective(1000px) rotateY(0deg) scale(1);
@@ -282,7 +283,45 @@
             <!-- Book Content -->
             <div class="book-content">
                 <p class="story-text">
-                    Pada suatu hari yang cerah di hutan, hiduplah seekor kelinci yang sangat sombong bernama Rico. Rico selalu membanggakan dirinya sebagai hewan tercepat di hutan. Setiap hari, dia berlari ke sana ke mari sambil mengejek hewan-hewan lain yang bergerak lambat. "Lihat aku! Aku sangat cepat! Kalian semua lambat sekali!" kata Rico dengan angkuh. Semua hewan di hutan sudah muak dengan sikap sombong Rico. Mereka mencari cara untuk memberi pelajaran kepada kelinci yang sombong itu. Pada suatu pagi, ketika Rico sedang berlari dan mengejek seperti biasa, tiba-tiba muncul suara kecil dari balik batu. "Rico, apakah kamu berani bertanding lari denganku?" tanya suara itu. Rico tertawa terbahak-bahak ketika melihat siapa yang mengajaknya bertanding. Ternyata itu adalah Kiko, seekor kura-kura kecil yang bergerak sangat lambat. "Hahahaha! Kamu, si lambat, mau bertanding lari denganku? Ini pasti lelucon terbaik tahun ini!" kata Rico sambil terus tertawa. Kiko tidak tersinggung dengan ejekan Rico. Dengan sabar dia berkata, "Aku serius, Rico. Mari kita bertanding lari dari pohon besar ini sampai ke sungai di ujung hutan. Siapa yang sampai duluan dialah pemenangnya." Rico masih terus tertawa, "Baiklah, Kiko. Aku terima tantanganmu. Ini akan menjadi kemenangan termudah dalam hidupku!" Keesokan harinya, semua hewan di hutan berkumpul untuk menyaksikan perlombaan antara Rico si kelinci cepat dan Kiko si kura-kura lambat. Pak Burung Hantu bertindak sebagai wasit. "Siap... mulai!" teriak Pak Burung Hantu. Rico langsung melesat seperti kilat, meninggalkan Kiko yang baru saja mulai melangkah perlahan. Dalam sekejap, Rico sudah berlari sangat jauh hingga Kiko tidak terlihat lagi. "Ini terlalu mudah," gumam Rico sambil terus berlari kencang. Ketika sudah berlari setengah perjalanan, Rico menoleh ke belakang dan tidak melihat Kiko sama sekali. "Kura-kura lambat itu pasti masih di belakang sana. Aku punya waktu banyak untuk istirahat," pikir Rico. Rico kemudian memutuskan untuk tidur siang di bawah pohon rindang. "Aku akan tidur sebentar saja. Toh, Kiko masih jauh di belakang. Aku bisa bangun nanti dan tetap menang," kata Rico sambil memejamkan mata. Sementara itu, Kiko terus berjalan perlahan tapi pasti. Langkah demi langkah, dia tidak pernah berhenti sekalipun. Ketika melihat Rico sedang tertidur di bawah pohon, Kiko tidak mengejek atau membangunkannya. Dia terus fokus berjalan menuju garis finish. "Pelan-pelan saja, yang penting sampai," gumam Kiko sambil terus melangkah. Rico terbangun ketika matahari sudah mulai condong ke barat. "Wah, aku tidur terlalu lama! Tapi tidak apa-apa, aku masih paling cepat," kata Rico sambil mengusap mata. Rico mulai berlari lagi, tapi kali ini dia tidak terlalu tergesa-gesa karena yakin dia masih akan menang. Ketika Rico hampir sampai di garis finish, dia terkejut melihat Kiko sudah berada sangat dekat dengan sungai. "Tidak mungkin!" teriak Rico sambil berlari sekuat tenaga. Tapi sudah terlambat. Tepat ketika Rico hampir menyusul, Kiko menyentuh tepi sungai terlebih dahulu. "Aku menang!" seru Kiko dengan gembira. Semua hewan di hutan bersorak gembira. Rico terduduk lemas di tanah, tidak percaya dengan apa yang baru saja terjadi. Pak Burung Hantu mendekat dan berkata, "Rico, ini adalah pelajaran berharga untukmu. Kecepatan tidak ada artinya jika disertai dengan kesombongan dan kemalasan. Kiko menang bukan karena dia cepat, tapi karena dia tekun dan tidak pernah menyerah." Rico merasa sangat malu dengan sikapnya selama ini. Dia mendekati Kiko dan berkata, "Maafkan aku, Kiko. Aku sudah sombong dan meremehkanmu. Kamu mengajarkanku bahwa ketekunan dan kesabaran lebih berharga daripada kecepatan semata." Kiko tersenyum ramah, "Tidak apa-apa, Rico. Yang penting kita sudah berteman sekarang." Sejak hari itu, Rico tidak lagi sombong. Dia menjadi lebih rendah hati dan sering membantu hewan-hewan lain di hutan. Rico dan Kiko pun menjadi sahabat baik yang saling membantu.
+                    Pada suatu hari yang cerah di hutan, hiduplah seekor kelinci yang sangat sombong bernama Rico. Rico
+                    selalu membanggakan dirinya sebagai hewan tercepat di hutan. Setiap hari, dia berlari ke sana ke mari
+                    sambil mengejek hewan-hewan lain yang bergerak lambat. "Lihat aku! Aku sangat cepat! Kalian semua lambat
+                    sekali!" kata Rico dengan angkuh. Semua hewan di hutan sudah muak dengan sikap sombong Rico. Mereka
+                    mencari cara untuk memberi pelajaran kepada kelinci yang sombong itu. Pada suatu pagi, ketika Rico
+                    sedang berlari dan mengejek seperti biasa, tiba-tiba muncul suara kecil dari balik batu. "Rico, apakah
+                    kamu berani bertanding lari denganku?" tanya suara itu. Rico tertawa terbahak-bahak ketika melihat siapa
+                    yang mengajaknya bertanding. Ternyata itu adalah Kiko, seekor kura-kura kecil yang bergerak sangat
+                    lambat. "Hahahaha! Kamu, si lambat, mau bertanding lari denganku? Ini pasti lelucon terbaik tahun ini!"
+                    kata Rico sambil terus tertawa. Kiko tidak tersinggung dengan ejekan Rico. Dengan sabar dia berkata,
+                    "Aku serius, Rico. Mari kita bertanding lari dari pohon besar ini sampai ke sungai di ujung hutan. Siapa
+                    yang sampai duluan dialah pemenangnya." Rico masih terus tertawa, "Baiklah, Kiko. Aku terima
+                    tantanganmu. Ini akan menjadi kemenangan termudah dalam hidupku!" Keesokan harinya, semua hewan di hutan
+                    berkumpul untuk menyaksikan perlombaan antara Rico si kelinci cepat dan Kiko si kura-kura lambat. Pak
+                    Burung Hantu bertindak sebagai wasit. "Siap... mulai!" teriak Pak Burung Hantu. Rico langsung melesat
+                    seperti kilat, meninggalkan Kiko yang baru saja mulai melangkah perlahan. Dalam sekejap, Rico sudah
+                    berlari sangat jauh hingga Kiko tidak terlihat lagi. "Ini terlalu mudah," gumam Rico sambil terus
+                    berlari kencang. Ketika sudah berlari setengah perjalanan, Rico menoleh ke belakang dan tidak melihat
+                    Kiko sama sekali. "Kura-kura lambat itu pasti masih di belakang sana. Aku punya waktu banyak untuk
+                    istirahat," pikir Rico. Rico kemudian memutuskan untuk tidur siang di bawah pohon rindang. "Aku akan
+                    tidur sebentar saja. Toh, Kiko masih jauh di belakang. Aku bisa bangun nanti dan tetap menang," kata
+                    Rico sambil memejamkan mata. Sementara itu, Kiko terus berjalan perlahan tapi pasti. Langkah demi
+                    langkah, dia tidak pernah berhenti sekalipun. Ketika melihat Rico sedang tertidur di bawah pohon, Kiko
+                    tidak mengejek atau membangunkannya. Dia terus fokus berjalan menuju garis finish. "Pelan-pelan saja,
+                    yang penting sampai," gumam Kiko sambil terus melangkah. Rico terbangun ketika matahari sudah mulai
+                    condong ke barat. "Wah, aku tidur terlalu lama! Tapi tidak apa-apa, aku masih paling cepat," kata Rico
+                    sambil mengusap mata. Rico mulai berlari lagi, tapi kali ini dia tidak terlalu tergesa-gesa karena yakin
+                    dia masih akan menang. Ketika Rico hampir sampai di garis finish, dia terkejut melihat Kiko sudah berada
+                    sangat dekat dengan sungai. "Tidak mungkin!" teriak Rico sambil berlari sekuat tenaga. Tapi sudah
+                    terlambat. Tepat ketika Rico hampir menyusul, Kiko menyentuh tepi sungai terlebih dahulu. "Aku menang!"
+                    seru Kiko dengan gembira. Semua hewan di hutan bersorak gembira. Rico terduduk lemas di tanah, tidak
+                    percaya dengan apa yang baru saja terjadi. Pak Burung Hantu mendekat dan berkata, "Rico, ini adalah
+                    pelajaran berharga untukmu. Kecepatan tidak ada artinya jika disertai dengan kesombongan dan kemalasan.
+                    Kiko menang bukan karena dia cepat, tapi karena dia tekun dan tidak pernah menyerah." Rico merasa sangat
+                    malu dengan sikapnya selama ini. Dia mendekati Kiko dan berkata, "Maafkan aku, Kiko. Aku sudah sombong
+                    dan meremehkanmu. Kamu mengajarkanku bahwa ketekunan dan kesabaran lebih berharga daripada kecepatan
+                    semata." Kiko tersenyum ramah, "Tidak apa-apa, Rico. Yang penting kita sudah berteman sekarang." Sejak
+                    hari itu, Rico tidak lagi sombong. Dia menjadi lebih rendah hati dan sering membantu hewan-hewan lain di
+                    hutan. Rico dan Kiko pun menjadi sahabat baik yang saling membantu.
                 </p>
             </div>
         </div>

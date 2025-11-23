@@ -181,6 +181,7 @@
                 opacity: 0;
                 transform: translateY(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -192,6 +193,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -279,7 +281,7 @@
                 <div class="story-icon">🐰🐢</div>
                 <h3 class="story-card-title">Kelinci dan Kura-kura</h3>
                 <p class="story-description">
-                    Cerita tentang perlombaan lari antara kelinci yang sombong dan kura-kura yang tekun. 
+                    Cerita tentang perlombaan lari antara kelinci yang sombong dan kura-kura yang tekun.
                     Pelajaran berharga tentang kesabaran dan ketekunan.
                 </p>
                 <div class="story-meta">
@@ -293,7 +295,7 @@
                 <div class="story-icon">🐜🦗</div>
                 <h3 class="story-card-title">Semut dan Belalang</h3>
                 <p class="story-description">
-                    Kisah tentang semut yang rajin bekerja dan belalang yang malas. 
+                    Kisah tentang semut yang rajin bekerja dan belalang yang malas.
                     Mengajarkan pentingnya kerja keras dan persiapan untuk masa depan.
                 </p>
                 <div class="story-meta">
@@ -307,7 +309,7 @@
                 <div class="story-icon">🦌🐊</div>
                 <h3 class="story-card-title">Si Kancil dan Buaya</h3>
                 <p class="story-description">
-                    Petualangan si Kancil yang cerdik menghadapi buaya-buaya di sungai. 
+                    Petualangan si Kancil yang cerdik menghadapi buaya-buaya di sungai.
                     Cerita tentang kecerdikan dan kreativitas dalam menyelesaikan masalah.
                 </p>
                 <div class="story-meta">
