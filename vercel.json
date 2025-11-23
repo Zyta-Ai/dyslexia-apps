@@ -7,13 +7,15 @@
     },
     "routes": [
         {
+            "src": "/(images|css|js|build|favicon\\.ico|.*\\.png|.*\\.jpg|.*\\.gif|.*\\.svg)(.*)",
+            "dest": "public/$1$2"
+        },
+        {
             "src": "/(.*)",
             "dest": "api/index.php"
         }
     ],
-    
     "env": {
-        
         "PHP_VERSION": "8.2",
         "APP_ENV": "production",
         "APP_DEBUG": "false",
@@ -25,13 +27,12 @@
         "DB_DATABASE": "disleksia1_drinkwrite",
         "DB_USERNAME": "disleksia1_drinkwrite",
         "DB_PASSWORD": "987f3b76e1d6fa45d50d254f8ec7d0e559ae0025",
-
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENT_CACHE": "/tmp/events.php",
         "APP_PACKAGE_CACHE": "/tmp/packages.php",
         "APP_ROUTE_CACHE": "/tmp/routes.php",
+        "APP_SERVICE_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp/views",
-
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
