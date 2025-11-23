@@ -11,7 +11,7 @@ class FontLoader {
         ];
         this.fallbackFonts = [
             'Comic Sans MS',
-            'Trebuchet MS', 
+            'Trebuchet MS',
             'Verdana',
             'Arial'
         ];
@@ -39,7 +39,7 @@ class FontLoader {
 
         Promise.allSettled(fontPromises).then(results => {
             const loadedFonts = results.filter(result => result.status === 'fulfilled' && result.value);
-            
+
             if (loadedFonts.length > 0) {
                 console.log('✅ OpenDyslexic font loaded successfully');
                 this.applyFont();
@@ -54,7 +54,7 @@ class FontLoader {
         // Deteksi font dengan membandingkan ukuran teks
         const testText = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         const fallbackFont = 'Arial';
-        
+
         // Buat elemen test
         const testDiv = document.createElement('div');
         testDiv.style.cssText = `
@@ -77,7 +77,7 @@ class FontLoader {
         for (const fontFamily of this.fontsToLoad) {
             testDiv.style.fontFamily = `"${fontFamily}", ${fallbackFont}`;
             const testWidth = testDiv.offsetWidth;
-            
+
             if (testWidth !== fallbackWidth) {
                 fontLoaded = true;
                 console.log(`✅ ${fontFamily} loaded successfully`);
@@ -98,7 +98,7 @@ class FontLoader {
     applyFont() {
         // Terapkan font OpenDyslexic
         document.body.setAttribute('data-font-loaded', 'true');
-        
+
         // Tambahkan style untuk memastikan font diterapkan
         const style = document.createElement('style');
         style.textContent = `
@@ -112,7 +112,7 @@ class FontLoader {
     applyFallback() {
         // Terapkan font fallback yang ramah disleksia
         document.body.setAttribute('data-font-loaded', 'fallback');
-        
+
         const style = document.createElement('style');
         style.textContent = `
             [data-font-loaded="fallback"] * {
@@ -143,9 +143,9 @@ class FontLoader {
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         `;
         notification.textContent = '⚠️ Font disleksia tidak dapat dimuat. Menggunakan font alternatif.';
-        
+
         document.body.appendChild(notification);
-        
+
         // Hapus notifikasi setelah 5 detik
         setTimeout(() => {
             if (notification.parentNode) {

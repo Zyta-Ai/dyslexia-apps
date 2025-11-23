@@ -5,20 +5,23 @@
         /* Import OpenDyslexic font with multiple sources for better compatibility */
         @import url('https://fonts.googleapis.com/css2?family=Open+Dyslexic:wght@400;700&display=swap');
         @import url('https://cdn.jsdelivr.net/npm/@opendyslexic/opendyslexic@1.0.3/open-dyslexic-regular.css');
-        
+
         /* Define font-face for local fallback */
         @font-face {
             font-family: 'OpenDyslexic-Fallback';
             src: local('Comic Sans MS'), local('Trebuchet MS'), local('Verdana');
             font-display: swap;
         }
+
         body {
-            font-family: 'Open Dyslexic', 'OpenDyslexic', 'OpenDyslexic-Fallback', 'Comic Sans MS', 'Trebuchet MS', 'Verdana', cursive, sans-serif;
-            font-display: swap;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             margin: 0;
             padding: 0;
+        }
+        
+        * {
+            font-family: var(--font-primary) !important;
         }
 
         /* Container Styles */

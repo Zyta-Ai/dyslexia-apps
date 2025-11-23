@@ -1,0 +1,115 @@
+/**
+ * OpenDyslexic Font CSS dengan Multiple Sources dan Fallback
+ * Memastikan font disleksia tersedia di semua device
+ */
+
+/* Primary: Google Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Open+Dyslexic:wght@400;700&display=swap');
+
+/* Secondary: JSDelivr CDN */
+@import url('https://cdn.jsdelivr.net/npm/@opendyslexic/opendyslexic@1.0.3/open-dyslexic-regular.css');
+
+/* Font Face Definitions untuk berbagai format */
+@font-face {
+    font-family: 'OpenDyslexic';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: 
+        /* Web fonts dari CDN */
+        url('https://fonts.gstatic.com/s/opendyslexic/v15/OpNCd0LadmmGqoO7eT2L8LVHl1w.woff2') format('woff2'),
+        /* Alternatif CDN */
+        url('https://cdn.jsdelivr.net/npm/@opendyslexic/opendyslexic@1.0.3/fonts/OpenDyslexic-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/npm/@opendyslexic/opendyslexic@1.0.3/fonts/OpenDyslexic-Regular.woff') format('woff'),
+        /* Local system fonts */
+        local('OpenDyslexic-Regular'),
+        local('OpenDyslexic'),
+        local('Open Dyslexic');
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: 
+        url('https://fonts.gstatic.com/s/opendyslexic/v15/OpNCd0LadmmGqoO7eT2L8LVHl1w.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/npm/@opendyslexic/opendyslexic@1.0.3/fonts/OpenDyslexic-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/npm/@opendyslexic/opendyslexic@1.0.3/fonts/OpenDyslexic-Bold.woff') format('woff'),
+        local('OpenDyslexic-Bold'),
+        local('Open Dyslexic Bold');
+}
+
+/* Fallback fonts untuk disleksia */
+@font-face {
+    font-family: 'DyslexiaFriendly';
+    font-display: swap;
+    src: 
+        local('Comic Sans MS'),
+        local('Trebuchet MS'),
+        local('Verdana'),
+        local('Tahoma'),
+        local('DejaVu Sans'),
+        local('Ubuntu');
+}
+
+/* CSS Variables untuk font stacks */
+:root {
+    --font-primary: 'Open Dyslexic', 'OpenDyslexic', 'DyslexiaFriendly', 'Comic Sans MS', cursive, sans-serif;
+    --font-fallback: 'Comic Sans MS', 'Trebuchet MS', 'Verdana', 'Tahoma', cursive, sans-serif;
+}
+
+/* Base font application */
+.dyslexic-font,
+.font-dyslexic {
+    font-family: var(--font-primary);
+    font-feature-settings: 'kern' 1, 'liga' 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fallback for when fonts fail to load */
+.font-loading-fallback {
+    font-family: var(--font-fallback);
+}
+
+/* Enhanced readability for dyslexia */
+.dyslexic-text {
+    font-family: var(--font-primary);
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+}
+
+/* Different font weights */
+.dyslexic-font-normal {
+    font-family: var(--font-primary);
+    font-weight: 400;
+}
+
+.dyslexic-font-bold {
+    font-family: var(--font-primary);
+    font-weight: 700;
+}
+
+/* Responsive font sizes */
+.dyslexic-text-sm {
+    font-size: 0.875rem;
+}
+
+.dyslexic-text-base {
+    font-size: 1rem;
+}
+
+.dyslexic-text-lg {
+    font-size: 1.125rem;
+}
+
+.dyslexic-text-xl {
+    font-size: 1.25rem;
+}
+
+.dyslexic-text-2xl {
+    font-size: 1.5rem;
+}
