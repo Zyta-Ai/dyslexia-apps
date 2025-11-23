@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIBI - Aplikasi Literasi Inklusif</title>
 
-    {{-- TEST: Google Font untuk verify environment --}}
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
+    {{-- DYSLEXIA-FRIENDLY FONTS: Atkinson Hyperlegible + Open Sans --}}
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
     {{-- DYSLEXIC FONTS CSS - Font lokal dari server kita --}}
     <link rel="stylesheet" href="{{ asset('css/dyslexic-fonts.css') }}">
 

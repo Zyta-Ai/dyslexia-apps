@@ -1,35 +1,36 @@
 /**
- * Font Test dan OpenDyslexic - Sesuai Artikel Debug Strategy
- * Menggunakan Google Font test dulu, kemudian local fonts
+ * Font OpenDyslexic - SOLUSI SEMENTARA MENGGUNAKAN CDN
+ * Local fonts tidak bisa diakses di Vercel, gunakan CDN eksternal dulu
  */
+
+/* Impor OpenDyslexic dari CDN eksternal yang reliable */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 
 /* TEST: Google Font verification (temporary) */
 .font-test-google {
     font-family: 'Open Sans', sans-serif !important;
 }
 
-/* Deklarasi font kustom Regular - NAMA HARUS SAMA PERSIS */
+/* FALLBACK: Jika CDN gagal, gunakan @font-face dengan URL absolut CDN */
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('/fonts/OpenDyslexic-Regular.woff2') format('woff2'),
-         url('/fonts/OpenDyslexic-Regular.woff') format('woff'),
-         url('/fonts/OpenDyslexic-Regular.otf') format('opentype');
+    src: url('https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@master/web/OpenDyslexic-Regular.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@master/web/OpenDyslexic-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap; /* Penting untuk kinerja */
+    font-display: swap;
 }
 
-/* Deklarasi font kustom Bold - NAMA HARUS SAMA PERSIS */
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('/fonts/OpenDyslexic-Bold.woff') format('woff'),
-         url('/fonts/OpenDyslexic-Bold.otf') format('opentype');
+    src: url('https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@master/web/OpenDyslexic-Bold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@master/web/OpenDyslexic-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
-/* PRIORITAS CSS - Target semua elemen text dengan !important untuk debugging */
+/* PRIORITAS CSS - Menggunakan font yang pasti accessible di semua device */
 body, h1, h2, h3, h4, h5, h6, p, span, li, a, div, td, th, label, input, textarea, select {
-    font-family: 'OpenDyslexic', 'Open Sans', 'Comic Sans MS', Arial, sans-serif !important;
+    font-family: 'Atkinson Hyperlegible', 'OpenDyslexic', 'Open Sans', 'Comic Sans MS', 'Trebuchet MS', Arial, sans-serif !important;
 }
