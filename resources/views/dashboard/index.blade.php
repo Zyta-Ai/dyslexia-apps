@@ -71,15 +71,12 @@
         background-position: center;
     }
 
-    /* Kustom Flexbox Responsif untuk Card Dongeng */
     .story-banner-content {
-        /* Default: Column untuk mobile */
         flex-direction: column;
         align-items: center;
     }
     @media (min-width: 768px) {
         .story-banner-content {
-            /* Row untuk desktop */
             flex-direction: row;
             align-items: flex-start;
         }
@@ -92,8 +89,8 @@
         <div class="flex justify-between items-start mb-6">
 
             <div class="sapaan-header">
-                <img src="{{ asset('images/siku.png') }}" alt="Sun Icon" class="mr-4 gambar" /> 
-                <span>Hai, UI Tester!</span> 
+                <img src="{{ asset('images/maskot/siku.png') }}" alt="Sun Icon" class="mr-4 gambar" /> 
+                <span>Hai, Rina!</span> 
             </div>
 
             <a href="/login"
@@ -118,7 +115,7 @@
                     </p>
                     
                     <div class="flex justify-center md:justify-end w-full">
-                        <a href="/games/dongeng" 
+                        <a href="{{ route('dongeng.index') }}" 
                            class="dongeng-button px-4 py-2 rounded-lg font-bold shadow-md transition hover:opacity-90 mt-2">
                             Baca Dongeng
                         </a>
@@ -129,17 +126,17 @@
 
         <div class="game-grid grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <a href="/games/tebak-nama" class="game-card rounded-xl shadow-lg overflow-hidden transition hover:shadow-xl">
+            <a href="/games/audiovisual" class="game-card rounded-xl shadow-lg overflow-hidden transition hover:shadow-xl">
                 <div class="illustration-area" style="background-image: url('{{ asset('images/audio.jpg') }}');"></div>
                 <div class="cta-button font-bold py-3 text-center text-lg transition hover:opacity-90">Mulai Game →</div>
             </a>
 
-            <a href="/games/cari-kata" class="game-card rounded-xl shadow-lg overflow-hidden transition hover:shadow-xl">
+            <a href="/games/susunkata" class="game-card rounded-xl shadow-lg overflow-hidden transition hover:shadow-xl">
                 <div class="illustration-area" style="background-image: url('{{ asset('images/pilih_kata.jpg') }}');"></div>
                 <div class="cta-button font-bold py-3 text-center text-lg transition hover:opacity-90">Mulai Game →</div>
             </a>
 
-            <a href="/games/susun-kata" class="game-card rounded-xl shadow-lg overflow-hidden transition hover:shadow-xl">
+            <a href="/games/pilihkata" class="game-card rounded-xl shadow-lg overflow-hidden transition hover:shadow-xl">
                 <div class="illustration-area" style="background-image: url('{{ asset('images/susun_kata.jpg') }}');"></div>
                 <div class="cta-button font-bold py-3 text-center text-lg transition hover:opacity-90">Mulai Game →</div>
             </a>
