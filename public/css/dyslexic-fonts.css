@@ -1,9 +1,14 @@
 /**
- * Font OpenDyslexic - Sesuai Artikel dengan Format Modern
- * Font akan di-download dari server lokal dengan multiple format
+ * Font Test dan OpenDyslexic - Sesuai Artikel Debug Strategy
+ * Menggunakan Google Font test dulu, kemudian local fonts
  */
 
-/* Deklarasi font kustom Regular */
+/* TEST: Google Font verification (temporary) */
+.font-test-google {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+/* Deklarasi font kustom Regular - NAMA HARUS SAMA PERSIS */
 @font-face {
     font-family: 'OpenDyslexic';
     src: url('/fonts/OpenDyslexic-Regular.woff2') format('woff2'),
@@ -14,7 +19,7 @@
     font-display: swap; /* Penting untuk kinerja */
 }
 
-/* Deklarasi font kustom Bold */
+/* Deklarasi font kustom Bold - NAMA HARUS SAMA PERSIS */
 @font-face {
     font-family: 'OpenDyslexic';
     src: url('/fonts/OpenDyslexic-Bold.woff') format('woff'),
@@ -24,7 +29,7 @@
     font-display: swap;
 }
 
-/* Terapkan font ke seluruh aplikasi dengan !important untuk debug */
-body, p, h1, h2, h3, h4, h5, h6, span, div {
-    font-family: 'OpenDyslexic', 'Comic Sans MS', Arial, sans-serif !important;
+/* PRIORITAS CSS - Target semua elemen text dengan !important untuk debugging */
+body, h1, h2, h3, h4, h5, h6, p, span, li, a, div, td, th, label, input, textarea, select {
+    font-family: 'OpenDyslexic', 'Open Sans', 'Comic Sans MS', Arial, sans-serif !important;
 }

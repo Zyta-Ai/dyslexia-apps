@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Test - Debug Environment</title>
+    
+    <!-- Google Font Test -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .test-google {
+            font-family: 'Open Sans', sans-serif !important;
+            font-size: 24px;
+            margin: 20px;
+            padding: 20px;
+            background: #f0f8ff;
+            border: 2px solid #4169E1;
+        }
+        
+        .test-default {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            margin: 20px;
+            padding: 20px;
+            background: #fff0f0;
+            border: 2px solid #DC143C;
+        }
+        
+        .test-custom {
+            font-family: 'OpenDyslexic', 'Comic Sans MS', Arial, sans-serif !important;
+            font-size: 24px;
+            margin: 20px;
+            padding: 20px;
+            background: #f0fff0;
+            border: 2px solid #228B22;
+        }
+    </style>
+    
+    <!-- Link ke CSS custom fonts -->
+    <link rel="stylesheet" href="/css/dyslexic-fonts.css">
+</head>
+<body>
+    <h1>🧪 Font Loading Test</h1>
+    
+    <div class="test-google">
+        <strong>TEST 1 - Google Font (Open Sans):</strong><br>
+        Ini adalah test menggunakan Google Font Open Sans. Jika ini berbeda dari font browser default, berarti environment Vercel BISA load web fonts.
+    </div>
+    
+    <div class="test-default">
+        <strong>TEST 2 - Default Font (Arial):</strong><br>
+        Ini adalah test menggunakan Arial default. Ini harus selalu tampil sama di semua device.
+    </div>
+    
+    <div class="test-custom">
+        <strong>TEST 3 - Custom OpenDyslexic Font:</strong><br>
+        Ini adalah test menggunakan OpenDyslexic custom font dari server lokal. Jika ini tampil berbeda dari TEST 2, berarti OpenDyslexic berhasil dimuat.
+    </div>
+    
+    <div style="margin: 20px; padding: 20px; background: #fffacd; border: 2px solid #DAA520;">
+        <h3>📋 Instruksi Debug:</h3>
+        <ol>
+            <li><strong>Jika TEST 1 = TEST 2</strong> → Google Font gagal dimuat, ada masalah di environment Vercel</li>
+            <li><strong>Jika TEST 1 ≠ TEST 2</strong> → Google Font berhasil, environment Vercel OK</li>
+            <li><strong>Jika TEST 3 = TEST 2</strong> → OpenDyslexic gagal dimuat, ada masalah di file font lokal</li>
+            <li><strong>Jika TEST 3 ≠ TEST 2</strong> → OpenDyslexic berhasil dimuat!</li>
+        </ol>
+    </div>
+    
+    <script>
+        // JavaScript untuk detect fonts
+        document.addEventListener('DOMContentLoaded', function() {
+            const testResults = document.createElement('div');
+            testResults.style.cssText = 'margin: 20px; padding: 20px; background: #f5f5f5; border: 2px solid #666;';
+            
+            // Test apakah fonts loaded
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            
+            // Ukur default font
+            context.font = '24px Arial';
+            const arialWidth = context.measureText('Test Font').width;
+            
+            // Test Google Font
+            context.font = '24px "Open Sans", Arial';
+            const openSansWidth = context.measureText('Test Font').width;
+            
+            // Test Custom Font  
+            context.font = '24px "OpenDyslexic", Arial';
+            const openDyslexicWidth = context.measureText('Test Font').width;
+            
+            testResults.innerHTML = `
+                <h3>🔍 JavaScript Font Detection Results:</h3>
+                <p><strong>Arial width:</strong> ${arialWidth}px</p>
+                <p><strong>Open Sans width:</strong> ${openSansWidth}px ${openSansWidth !== arialWidth ? '✅ LOADED' : '❌ FAILED'}</p>
+                <p><strong>OpenDyslexic width:</strong> ${openDyslexicWidth}px ${openDyslexicWidth !== arialWidth ? '✅ LOADED' : '❌ FAILED'}</p>
+            `;
+            
+            document.body.appendChild(testResults);
+        });
+    </script>
+</body>
+</html>
