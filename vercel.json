@@ -11,7 +11,9 @@
             "dest": "api/index.php"
         }
     ],
+    
     "env": {
+        
         "PHP_VERSION": "8.2",
         "APP_ENV": "production",
         "APP_DEBUG": "false",
@@ -28,10 +30,9 @@
         "APP_EVENT_CACHE": "/tmp/events.php",
         "APP_PACKAGE_CACHE": "/tmp/packages.php",
         "APP_ROUTE_CACHE": "/tmp/routes.php",
-        "APP_SERVICE_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp/views",
 
-        "CHACHE_DRIVER": "array",
+        "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
     }
