@@ -5,6 +5,35 @@
             "runtime": "vercel-php@0.7.4"
         }
     },
+    "headers": [
+        {
+            "source": "/fonts/(.*)\\.woff2",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "font/woff2"
+                }
+            ]
+        },
+        {
+            "source": "/fonts/(.*)\\.woff",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "font/woff"
+                }
+            ]
+        },
+        {
+            "source": "/fonts/(.*)\\.otf",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "font/otf"
+                }
+            ]
+        }
+    ],
     "routes": [
         {
             "src": "/(images|css|js|fonts|build|favicon\\.ico|.*\\.png|.*\\.jpg|.*\\.gif|.*\\.svg|.*\\.otf|.*\\.ttf|.*\\.woff|.*\\.woff2)(.*)",

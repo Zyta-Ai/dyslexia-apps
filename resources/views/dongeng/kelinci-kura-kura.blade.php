@@ -7,7 +7,9 @@
             min-height: 100vh;
             margin: 0;
             padding: 0;
-        }        /* Story Book Container */
+        }
+
+        /* Story Book Container */
         .story-book {
             min-height: 100vh;
             display: flex;

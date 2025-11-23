@@ -7,7 +7,9 @@
             min-height: 100vh;
             margin: 0;
             padding: 0;
-        }        /* Container Styles */
+        }
+
+        /* Container Styles */
         .story-container {
             min-height: 100vh;
             display: flex;
