@@ -1133,16 +1133,16 @@
                 videoContainer.style.display = 'none';
                 return;
             } else if (questionNumber === 2) {
-                videoSrc = '{{ asset('video/pilih_kata/soal-2.mp4') }}';
+                videoSrc = '{{ asset('videos/pilih_kata/soal-2.mp4') }}';
                 videoTitle = 'Video Penjelasan Soal ke 2';
             } else if (questionNumber === 3) {
-                videoSrc = '{{ asset('video/pilih_kata/soal-3.mp4') }}';
+                videoSrc = '{{ asset('videos/pilih_kata/soal-3.mp4') }}';
                 videoTitle = 'Video Penjelasan Soal ke 3';
             } else if (questionNumber === 4) {
-                videoSrc = '{{ asset('video/pilih_kata/soal-4.mp4') }}';
+                videoSrc = '{{ asset('videos/pilih_kata/soal-4.mp4') }}';
                 videoTitle = 'Video Penjelasan Soal ke 4';
             } else if (questionNumber === 5) {
-                videoSrc = '{{ asset('video/pilih_kata/soal-5.mp4') }}';
+                videoSrc = '{{ asset('videos/pilih_kata/soal-5.mp4') }}';
                 videoTitle = 'Video Penjelasan Soal ke 5';
             } else {
                 // Hide video for unknown questions

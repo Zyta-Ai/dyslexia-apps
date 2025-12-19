@@ -7,7 +7,7 @@
     },
     "routes": [
         {
-            "src": "/(images|css|js|fonts|build|favicon\\.ico|.*\\.png|.*\\.jpg|.*\\.gif|.*\\.svg|.*\\.otf|.*\\.ttf|.*\\.woff|.*\\.woff2)(.*)",
+            "src": "/(images|css|js|fonts|build|videos|audio|favicon\\.ico|.*\\.png|.*\\.jpg|.*\\.gif|.*\\.svg|.*\\.otf|.*\\.ttf|.*\\.woff|.*\\.woff2|.*\\.mp4|.*\\.mp3|.*\\.wav)(.*)",
             "dest": "public/$1$2"
         },
         {

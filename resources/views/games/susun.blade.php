@@ -1341,23 +1341,23 @@
 
             // Video mapping berdasarkan correct sentence
             if (currentQ.correct.includes("Budi Beli Apel")) {
-                videoSrc = '{{ asset('video/susun_kata/budi_beli_aple.mp4') }}';
+                videoSrc = '{{ asset('videos/susun_kata/budi_beli_aple.mp4') }}';
                 videoTitle = '';
             } else if (currentQ.correct.includes("Ibu Beli Labu")) {
-                videoSrc = '{{ asset('video/susun_kata/ibu_beli_labu.mp4') }}';
+                videoSrc = '{{ asset('videos/susun_kata/ibu_beli_labu.mp4') }}';
                 videoTitle = '';
             } else if (currentQ.correct.includes("Kasur Aku Rusak")) {
-                videoSrc = '{{ asset('video/susun_kata/kasur_aku_rusak.mp4') }}';
+                videoSrc = '{{ asset('videos/susun_kata/kasur_aku_rusak.mp4') }}';
                 videoTitle = '';
             } else if (currentQ.correct.includes("Kata Baku")) {
-                videoSrc = '{{ asset('video/susun_kata/kata_baku_di_buku.mp4') }}';
+                videoSrc = '{{ asset('videos/susun_kata/kata_baku_di_buku.mp4') }}';
                 videoTitle = '';
             } else if (currentQ.correct.includes("Nama Mama")) {
-                videoSrc = '{{ asset('video/susun_kata/nama_mama_saya_nana.mp4') }}';
+                videoSrc = '{{ asset('videos/susun_kata/nama_mama_saya_nana.mp4') }}';
                 videoTitle = '';
             } else {
                 // Default fallback
-                videoSrc = '{{ asset('video/susun_kata/budi_beli_aple.mp4') }}';
+                videoSrc = '{{ asset('videos/susun_kata/budi_beli_aple.mp4') }}';
                 videoTitle = '';
             }
 
@@ -1883,23 +1883,23 @@
 
             // Set explanation text dan video source berdasarkan kalimat
             if (currentQ.correct.includes("Budi Beli Apel")) {
-                videoSrc = '{{ asset('video/susun_kata/budi_beli_aple.mp4') }}';
+                videoSrc = '{{ asset('videos/susun_kata/budi_beli_aple.mp4') }}';
                 videoTitle = 'Video Penjelasan';
                 explanationText = 'Jawaban: "Budi Beli Apel"';
             } else if (currentQ.correct.includes("Ibu Beli Labu")) {
-                videoSrc = '{{ asset('video/susun_kata/ibu_beli_labu.mp4') }}';
+                videoSrc = '{{ asset('videos/susun_kata/ibu_beli_labu.mp4') }}';
                 videoTitle = 'Video Penjelasan';
                 explanationText = 'Jawaban: "Ibu Beli Labu"';
             } else if (currentQ.correct.includes("Kasur Aku Rusak")) {
-                videoSrc = '{{ asset('video/susun_kata/kasur_aku_rusak.mp4') }}';
+                videoSrc = '{{ asset('videos/susun_kata/kasur_aku_rusak.mp4') }}';
                 videoTitle = 'Video Penjelasan';
                 explanationText = 'Jawaban: "Kasur Aku Rusak"';
             } else if (currentQ.correct.includes("Kata Baku")) {
-                videoSrc = '{{ asset('video/susun_kata/kata_baku_di_buku.mp4') }}';
+                videoSrc = '{{ asset('videos/susun_kata/kata_baku_di_buku.mp4') }}';
                 videoTitle = 'Video Penjelasan';
                 explanationText = 'Jawaban: "Kata Baku di Buku"';
             } else if (currentQ.correct.includes("Nama Mama")) {
-                videoSrc = '{{ asset('video/susun_kata/nama_mama_saya_nana.mp4') }}';
+                videoSrc = '{{ asset('videos/susun_kata/nama_mama_saya_nana.mp4') }}';
                 videoTitle = 'Video Penjelasan';
                 explanationText = 'Jawaban: "Nama Mama Saya Nana"';
             }

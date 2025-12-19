@@ -1840,7 +1840,7 @@
                                 margin-bottom: 24px;
                                 border: 2px solid rgba(255,255,255,0.5);
                             ">
-                                <source src="{{ asset('video/ran/pqdb.mp4') }}" type="video/mp4">
+                                <source src="{{ asset('videos/ran/pqdb.mp4') }}" type="video/mp4">
                                 Browser Anda tidak mendukung video HTML5.
                             </video>
                             
