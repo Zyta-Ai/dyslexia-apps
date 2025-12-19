@@ -26,8 +26,8 @@
         }
 
         /* =========================================================================
-               RAPID AUTOMATIC NAMING (RAN) - STYLE
-            ========================================================================= */
+                           RAPID AUTOMATIC NAMING (RAN) - STYLE
+                        ========================================================================= */
         .game-container {
             display: flex;
             flex-direction: column;
@@ -973,6 +973,18 @@
             }
         }
 
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .welcome-message-box {
@@ -1124,7 +1136,7 @@
                 <div class="text-6xl mb-6">🎉</div>
                 <p class="text-xl mb-6 text-gray-600">Skor Akhir: <span id="final-score"
                         class="font-extrabold text-green-600 text-3xl block mt-2"></span></p>
-                <p class="text-lg mb-6 text-gray-600">Waktu Bonus: <span id="time-bonus"
+                <p class="text-lg mb-6 text-gray-600">Waktu: <span id="time-bonus"
                         class="font-bold text-blue-600"></span> detik</p>
 
                 <div class="navigation-container">
@@ -1162,7 +1174,8 @@
                     colors: ['#dc2626', '#eab308', '#2563eb', '#16a34a'],
                     answers: ['MERAH', 'KUNING', 'BIRU', 'HIJAU'],
                     buttonColors: ['#eab308', '#16a34a', '#dc2626',
-                    '#2563eb'], // MERAH→KUNING, KUNING→HIJAU, BIRU→MERAH, HIJAU→BIRU
+                        '#2563eb'
+                    ], // MERAH→KUNING, KUNING→HIJAU, BIRU→MERAH, HIJAU→BIRU
                     totalItems: 2,
                     misleadingButtons: true
                 },
@@ -1173,7 +1186,7 @@
                     title: 'RAN Huruf - Level 1',
                     description: 'Dengarkan dan pilih huruf yang tepat',
                     stimuli: ['b', 'd', 'p', 'q'],
-                    answers: ['B', 'D', 'P', 'Q'],
+                    answers: ['b', 'd', 'p', 'q'],
                     audioTexts: ['beh', 'deh', 'peh', 'kiu'],
                     totalItems: 2,
                     audioConfusing: false
@@ -1185,7 +1198,7 @@
                     title: 'RAN Huruf - Level 2',
                     description: 'Audio sedikit mengecoh, dengarkan baik-baik',
                     stimuli: ['b', 'd', 'p', 'q'],
-                    answers: ['B', 'D', 'P', 'Q'],
+                    answers: ['b', 'd', 'p', 'q'],
                     audioTexts: ['beh', 'deh', 'peh', 'kiu'],
                     totalItems: 2,
                     audioConfusing: true
@@ -1197,7 +1210,7 @@
                     title: 'RAN Huruf - Level 3',
                     description: 'Tantangan terakhir dengan audio yang mengecoh',
                     stimuli: ['b', 'd', 'p', 'q'],
-                    answers: ['B', 'D', 'P', 'Q'],
+                    answers: ['b', 'd', 'p', 'q'],
                     audioTexts: ['beh', 'deh', 'peh', 'kiu'],
                     totalItems: 2,
                     audioConfusing: true
@@ -1441,7 +1454,7 @@
                 elAnswerOptions.innerHTML = '';
 
                 console.log('Setting up answer options for level:', levelData.level, 'misleading:', levelData
-                .misleadingButtons);
+                    .misleadingButtons);
 
                 levelData.answers.forEach((answer, index) => {
                     const btn = document.createElement('button');
@@ -1691,29 +1704,33 @@
                 // Auto advance ke level berikutnya atau complete game
                 if (currentLevel < GAME_DATA.length - 1) {
                     setTimeout(() => {
-                        setTimeout(() => {
-                            // Move to next level
-                            currentLevel++;
-                            currentProgress = 0; // Reset progress SETELAH increment level
+                        // Move to next level
+                        currentLevel++;
+                        currentProgress = 0;
 
-                            console.log('LEVEL TRANSITION: Now level', currentLevel + 1, 'progress reset to',
-                                currentProgress);
+                        console.log('LEVEL TRANSITION: Now level', currentLevel + 1, 'progress reset to',
+                            currentProgress);
 
-                            // Update UI langsung tanpa animasi
-                            elCurrentProgress.textContent = currentProgress;
-                            elProgressBar.style.transition = 'none';
-                            elProgressBar.style.width = '0%';
-                            elTimerDisplay.classList.remove('warning');
+                        // Update UI langsung tanpa animasi
+                        elCurrentProgress.textContent = currentProgress;
+                        elProgressBar.style.transition = 'none';
+                        elProgressBar.style.width = '0%';
+                        elTimerDisplay.classList.remove('warning');
 
-                            // Show level transition text
+                        // SPECIAL: Jika selesai level 2 (currentLevel sekarang = 2), show video QPDB
+                        if (currentLevel === 2) {
+                            // PAUSE TIMER
+                            clearInterval(gameTimer);
+                            showVideoQPDB();
+                        } else {
+                            // Normal level transition
                             showFeedback(`Level ${currentLevel + 1}`, 'neutral');
 
                             setTimeout(() => {
-                                // Restore progress bar transition
                                 elProgressBar.style.transition = 'width 0.2s ease-out';
                                 loadLevel();
                             }, 500);
-                        }, 200);
+                        }
                     }, 500);
                 } else {
                     setTimeout(() => {
@@ -1772,6 +1789,116 @@
                 } catch (e) {
                     console.log('Mascot image error:', e);
                 }
+            }
+
+            // Show QPDB video explanation after level 2
+            function showVideoQPDB() {
+                console.log('Showing QPDB video explanation - timer paused');
+
+                // Create video overlay
+                const videoHTML = `
+                    <div id="qpdb-video-overlay" style="
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100vw;
+                        height: 100vh;
+                        background: linear-gradient(135deg, rgba(99, 102, 241, 0.95), rgba(168, 85, 247, 0.95));
+                        backdrop-filter: blur(20px);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 9999;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        animation: fadeIn 0.5s ease-out;
+                    ">
+                        <div style="
+                            background: rgba(255, 255, 255, 0.95);
+                            backdrop-filter: blur(20px);
+                            border-radius: 24px;
+                            padding: 32px;
+                            max-width: 640px;
+                            width: 90%;
+                            text-align: center;
+                            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+                            border: 1px solid rgba(255, 255, 255, 0.3);
+                        ">
+                            <div style="margin-bottom: 20px;">
+                                <div style="font-size: 3rem; margin-bottom: 12px;"></div>
+                                <h2 style="color: #4c1d95; margin: 0 0 8px 0; font-size: 1.8rem; font-weight: 800;">Penjelasan Huruf Q P D B</h2>
+                                <p style="color: #6b7280; margin: 0; font-size: 1rem;">Pelajari perbedaan huruf yang sering membingungkan</p>
+                            </div>
+                            
+                            <video controls autoplay style="
+                                width: 100%;
+                                max-width: 520px;
+                                height: auto;
+                                border-radius: 16px;
+                                box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+                                margin-bottom: 24px;
+                                border: 2px solid rgba(255,255,255,0.5);
+                            ">
+                                <source src="{{ asset('video/ran/pqdb.mp4') }}" type="video/mp4">
+                                Browser Anda tidak mendukung video HTML5.
+                            </video>
+                            
+                            <button id="continue-game-btn" style="
+                                background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+                                color: white;
+                                border: none;
+                                border-radius: 16px;
+                                padding: 16px 32px;
+                                font-size: 1.2rem;
+                                font-weight: 700;
+                                cursor: pointer;
+                                box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+                                transition: all 0.3s ease;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 8px;
+                                margin: 0 auto;
+                                min-width: 200px;
+                            " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 32px rgba(139, 92, 246, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(139, 92, 246, 0.4)';">
+                                <span style="font-size: 1.1rem;">🚀</span>
+                                <span>Lanjut ke Level 3-5</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                // Insert video overlay
+                document.body.insertAdjacentHTML('beforeend', videoHTML);
+
+                // Setup continue button
+                document.getElementById('continue-game-btn').onclick = function() {
+                    console.log('Continue to level 3 clicked - resuming timer');
+
+                    // Remove video overlay
+                    const videoOverlay = document.getElementById('qpdb-video-overlay');
+                    if (videoOverlay) {
+                        videoOverlay.style.opacity = '0';
+                        videoOverlay.style.transform = 'scale(0.95)';
+                        videoOverlay.style.transition = 'all 0.3s ease-out';
+
+                        setTimeout(() => {
+                            videoOverlay.remove();
+
+                            // RESUME TIMER
+                            startTimer();
+
+                            // Continue to level 3
+                            showFeedback(`Level ${currentLevel + 1}`, 'neutral');
+
+                            setTimeout(() => {
+                                elProgressBar.style.transition = 'width 0.2s ease-out';
+                                loadLevel();
+                            }, 500);
+                        }, 300);
+                    }
+                };
             }
 
             // Speech synthesis function

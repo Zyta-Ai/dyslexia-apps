@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Font Test - Debug Environment</title>
 
-    <!-- Dyslexia-Friendly Fonts Test -->
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Font Test -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         .test-google {
@@ -28,22 +28,13 @@
             border: 2px solid #DC143C;
         }
 
-        .test-atkinson {
-            font-family: 'Atkinson Hyperlegible', sans-serif !important;
+        .test-custom {
+            font-family: 'OpenDyslexic', 'Comic Sans MS', Arial, sans-serif !important;
             font-size: 24px;
             margin: 20px;
             padding: 20px;
             background: #f0fff0;
             border: 2px solid #228B22;
-        }
-
-        .test-custom {
-            font-family: 'Atkinson Hyperlegible', 'OpenDyslexic', 'Comic Sans MS', Arial, sans-serif !important;
-            font-size: 24px;
-            margin: 20px;
-            padding: 20px;
-            background: #fff5ee;
-            border: 2px solid #ff8c00;
         }
     </style>
 
@@ -65,14 +56,10 @@
         Ini adalah test menggunakan Arial default. Ini harus selalu tampil sama di semua device.
     </div>
 
-    <div class="test-atkinson">
-        <strong>TEST 3 - Atkinson Hyperlegible (Google Fonts):</strong><br>
-        Ini adalah test menggunakan Atkinson Hyperlegible dari Google Fonts - font yang dirancang khusus untuk dyslexia dan low vision. Ini harus tampil berbeda dari Arial.
-    </div>
-
     <div class="test-custom">
-        <strong>TEST 4 - Combined Dyslexic Fonts:</strong><br>
-        Ini adalah test menggunakan fallback chain: Atkinson → OpenDyslexic → Comic Sans → Arial. Font terbaik yang tersedia akan digunakan.
+        <strong>TEST 3 - Custom OpenDyslexic Font:</strong><br>
+        Ini adalah test menggunakan OpenDyslexic custom font dari server lokal. Jika ini tampil berbeda dari TEST 2,
+        berarti OpenDyslexic berhasil dimuat.
     </div>
 
     <div style="margin: 20px; padding: 20px; background: #fffacd; border: 2px solid #DAA520;">

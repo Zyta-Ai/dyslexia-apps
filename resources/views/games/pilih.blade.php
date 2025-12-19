@@ -26,55 +26,71 @@
         }
 
         /* =========================================================================
-                           GAME PILIH KATA - STYLE
-                        ========================================================================= */
+                                   GAME PILIH KATA - STYLE
+                                ========================================================================= */
         .game-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 85vh;
-            padding: 1rem;
+            min-height: 100vh;
+            padding: 24px;
             max-width: 100vw;
             overflow-x: hidden;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
         }
 
         /* Mobile First Responsive */
         @media (max-width: 768px) {
             .game-container {
-                min-height: 90vh;
-                padding: 0.5rem;
+                padding: 16px;
                 justify-content: flex-start;
-                padding-top: 1rem;
+                padding-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .game-container {
+                padding: 12px;
+                padding-top: 16px;
             }
         }
 
         .card-register {
-            /* Menggunakan Gradient Teal Kustom */
-            background: linear-gradient(90deg, rgba(167, 222, 212, 0.7) 0%, rgba(123, 188, 174, 0.7) 100%);
-            border-radius: 1.5rem;
-            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            border-radius: 32px;
+            padding: 36px;
             width: 100%;
-            max-width: 600px;
+            max-width: 800px;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.12), 0 12px 40px rgba(0, 0, 0, 0.08);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .card-register:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 32px 100px rgba(0, 0, 0, 0.15), 0 16px 50px rgba(0, 0, 0, 0.10);
         }
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .card-register {
-                padding: 1rem;
-                border-radius: 1rem;
-                margin: 0 0.5rem;
-                max-width: calc(100vw - 1rem);
+                padding: 28px;
+                border-radius: 28px;
+                margin: 16px;
+                max-width: calc(100vw - 32px);
             }
         }
 
         @media (max-width: 480px) {
             .card-register {
-                padding: 0.75rem;
-                margin: 0 0.25rem;
+                padding: 24px;
+                border-radius: 24px;
+                margin: 12px;
+                max-width: calc(100vw - 24px);
             }
         }
 
@@ -183,6 +199,186 @@
             40%,
             80% {
                 transform: translateX(10px);
+            }
+        }
+
+        /* =========================================================================
+                                        DESIGN SYSTEM - CONSISTENT UI
+                                ========================================================================= */
+
+        /* Layout Sections */
+        .game-header {
+            margin-bottom: 32px;
+        }
+
+        .content-section {
+            margin-bottom: 24px;
+        }
+
+        .action-section {
+            margin-top: 32px;
+        }
+
+        /* Game Stats Header */
+        .game-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .stat-divider {
+            color: #cbd5e1;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Words Grid */
+        .words-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            padding: 0;
+        }
+
+        @media (max-width: 640px) {
+            .words-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
+
+        /* Buttons Design System */
+        .btn-primary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+            min-height: 56px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-icon {
+            font-size: 1.2rem;
+        }
+
+        .btn-text {
+            font-weight: 600;
+        }
+
+        /* EMBEDDED VIDEO PLAYER - More Rounded UI */
+        .help-video-container {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            border-radius: 28px;
+            padding: 28px;
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .help-video-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .help-video {
+            width: 100%;
+            height: 320px;
+            border-radius: 20px;
+            background: #000;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+            overflow: hidden;
+        }
+
+        .video-title {
+            text-align: center;
+            color: #1e293b;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        /* Mobile Responsive untuk Video */
+        @media (max-width: 768px) {
+            .help-video-container {
+                padding: 24px;
+                border-radius: 24px;
+            }
+
+            .help-video {
+                height: 240px;
+                border-radius: 16px;
+            }
+
+            .video-title {
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .help-video-container {
+                padding: 20px;
+                border-radius: 20px;
+            }
+
+            .help-video {
+                height: 200px;
+                border-radius: 16px;
+            }
+
+            .video-title {
+                font-size: 1rem;
+                margin-bottom: 12px;
             }
         }
 
@@ -806,26 +1002,54 @@
             <h2 class="text-2xl font-bold mb-4 text-gray-800">Pilih Kata yang Cocok</h2>
 
             <!-- Game Info -->
-            <div class="flex justify-between items-center mb-4 text-sm text-gray-600">
-                <span>Level: <span id="current-level" class="font-bold text-teal-600">1</span></span>
-                <span>Soal: <span id="current-question" class="font-bold">1</span> / <span id="total-questions"
-                        class="font-bold">5</span></span>
+            <div class="game-header">
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Level</span>
+                        <span id="current-level" class="stat-value">1</span>
+                    </div>
+                    <div class="stat-divider">•</div>
+                    <div class="stat-item">
+                        <span class="stat-label">Soal</span>
+                        <span class="stat-value">
+                            <span id="current-question">1</span> / <span id="total-questions">5</span>
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <!-- Sentence Display Area -->
-            <div id="sentence-display" class="sentence-display">
-                <span id="loading-text">Memuat soal...</span>
+            <div class="content-section">
+                <div id="sentence-display" class="sentence-display">
+                    <span id="loading-text">Memuat soal...</span>
+                </div>
+            </div>
+
+            <!-- Embedded Help Video -->
+            <div class="content-section">
+                <div class="help-video-container">
+                    <div id="video-title-embed" class="video-title">📹 Video Penjelasan Soal</div>
+                    <video id="help-video-embed" class="help-video" controls preload="metadata">
+                        <source id="video-source-embed" src="" type="video/mp4">
+                        Browser Anda tidak mendukung video HTML5.
+                    </video>
+                </div>
             </div>
 
             <!-- Word Options -->
-            <div id="words-container" class="grid grid-cols-2 gap-4 mb-6">
-                <!-- Words will be populated by JavaScript -->
+            <div class="content-section">
+                <div id="words-container" class="words-grid">
+                    <!-- Words will be populated by JavaScript -->
+                </div>
             </div>
 
             <!-- Next Button -->
-            <button id="next-btn" class="button-register w-full hidden" onclick="nextQuestion()">
-                ➡️ Soal Selanjutnya
-            </button>
+            <div class="action-section">
+                <button id="next-btn" class="btn-primary hidden" onclick="nextQuestion()">
+                    <span class="btn-icon">➡️</span>
+                    <span class="btn-text">Soal Selanjutnya</span>
+                </button>
+            </div>
         </div>
 
         <!-- Score Area -->
@@ -888,6 +1112,54 @@
                 options: ["cucu", "cuci"]
             }
         ];
+
+        // ========== VIDEO PLAYER FUNCTIONS ==========
+        // Update embedded video based on current question
+        function updateHelpVideo() {
+            const video = document.getElementById('help-video-embed');
+            const source = document.getElementById('video-source-embed');
+            const title = document.getElementById('video-title-embed');
+            const videoContainer = document.querySelector('.help-video-container');
+
+            if (!video || !source || !title || !videoContainer || !activeQuestions[currentIndex]) return;
+
+            const questionNumber = currentIndex + 1; // 1-based index
+            let videoSrc = '';
+            let videoTitle = '';
+
+            // Video mapping berdasarkan nomor soal (sesuai nama file dari user)
+            if (questionNumber === 1) {
+                // Soal 1 tidak ada video - sembunyikan container
+                videoContainer.style.display = 'none';
+                return;
+            } else if (questionNumber === 2) {
+                videoSrc = '{{ asset('video/pilih_kata/soal-2.mp4') }}';
+                videoTitle = 'Video Penjelasan Soal ke 2';
+            } else if (questionNumber === 3) {
+                videoSrc = '{{ asset('video/pilih_kata/soal-3.mp4') }}';
+                videoTitle = 'Video Penjelasan Soal ke 3';
+            } else if (questionNumber === 4) {
+                videoSrc = '{{ asset('video/pilih_kata/soal-4.mp4') }}';
+                videoTitle = 'Video Penjelasan Soal ke 4';
+            } else if (questionNumber === 5) {
+                videoSrc = '{{ asset('video/pilih_kata/soal-5.mp4') }}';
+                videoTitle = 'Video Penjelasan Soal ke 5';
+            } else {
+                // Hide video for unknown questions
+                videoContainer.style.display = 'none';
+                return;
+            }
+
+            // Show video container
+            videoContainer.style.display = 'block';
+
+            // Update video
+            source.src = videoSrc;
+            title.textContent = videoTitle;
+            video.load();
+
+            console.log('Updated help video for question', questionNumber, ':', videoTitle, videoSrc);
+        }
 
         // Game state
         let currentIndex = 0;
@@ -1060,6 +1332,9 @@
             // Update display
             elLevel.textContent = currentQuestion.level;
             elCurrentQ.textContent = currentIndex + 1;
+
+            // Update help video for current question
+            updateHelpVideo();
 
             // Clear containers
             elWordsContainer.innerHTML = '';

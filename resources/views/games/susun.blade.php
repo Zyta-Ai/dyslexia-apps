@@ -26,8 +26,8 @@
         }
 
         /* =========================================================================
-                   GAME MENGURUTKAN KATA - STYLE
-                ========================================================================= */
+                               GAME MENGURUTKAN KATA - STYLE
+                            ========================================================================= */
         .game-container {
             display: flex;
             flex-direction: column;
@@ -37,6 +37,76 @@
             padding: 1rem;
             max-width: 100vw;
             overflow-x: hidden;
+        }
+
+        /* Success Background Effect */
+        .game-container.success-shake {
+            animation: successShake 0.6s ease-in-out;
+            background: linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%) !important;
+        }
+
+        /* Error Background Effect */
+        .game-container.error-shake {
+            animation: errorShake 0.6s ease-in-out;
+            background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%) !important;
+        }
+
+        @keyframes successShake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translateX(-3px);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translateX(3px);
+            }
+        }
+
+        @keyframes errorShake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translateX(-5px);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translateX(5px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Mobile First Responsive */
@@ -553,6 +623,221 @@
             }
         }
 
+
+        /* Layout Sections */
+        .game-header {
+            margin-bottom: 32px;
+        }
+
+        .content-section {
+            margin-bottom: 24px;
+        }
+
+        .action-section {
+            margin-top: 32px;
+        }
+
+        /* Game Stats Header */
+        .game-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .stat-divider {
+            color: #cbd5e1;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Buttons Design System */
+        .btn-primary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+            min-height: 56px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-icon {
+            font-size: 1.2rem;
+        }
+
+        .btn-text {
+            font-weight: 600;
+        }
+
+        /* EMBEDDED VIDEO PLAYER */
+        .help-video-container {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .help-video {
+            width: 100%;
+            height: 320px;
+            border-radius: 16px;
+            background: #000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-title {
+            text-align: center;
+            color: #1e293b;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .game-header {
+                margin-bottom: 24px;
+            }
+
+            .content-section {
+                margin-bottom: 20px;
+            }
+
+            .action-section {
+                margin-top: 24px;
+            }
+
+            .game-stats {
+                padding: 12px 20px;
+                gap: 12px;
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
+            }
+
+            .stat-value {
+                font-size: 1.1rem;
+            }
+
+            .help-video-container {
+                padding: 20px;
+                border-radius: 16px;
+            }
+
+            .help-video {
+                height: 240px;
+                border-radius: 12px;
+            }
+
+            .video-title {
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+            }
+
+            .btn-primary {
+                padding: 14px 28px;
+                font-size: 1rem;
+                min-height: 52px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .game-header {
+                margin-bottom: 20px;
+            }
+
+            .content-section {
+                margin-bottom: 16px;
+            }
+
+            .action-section {
+                margin-top: 20px;
+            }
+
+            .game-stats {
+                padding: 12px 16px;
+                gap: 10px;
+                flex-direction: column;
+            }
+
+            .stat-divider {
+                display: none;
+            }
+
+            .help-video {
+                height: 200px;
+                border-radius: 12px;
+            }
+
+            .help-video-container {
+                padding: 16px;
+                border-radius: 16px;
+            }
+
+            .video-title {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .btn-primary {
+                padding: 12px 24px;
+                font-size: 0.95rem;
+                min-height: 48px;
+                border-radius: 14px;
+            }
+        }
+
         /* WELCOME SCREEN SYSTEM */
         .welcome-container {
             position: fixed;
@@ -929,31 +1214,52 @@
             <h2 class="text-2xl font-bold mb-4 text-gray-800">Mengurutkan Kata</h2>
 
             <!-- Game Info -->
-            <div class="flex justify-between items-center mb-4 text-sm text-gray-600">
-                <span>Level: <span id="current-level" class="font-bold text-teal-600">1</span></span>
-                <span>Soal: <span id="current-question" class="font-bold">1</span> / <span id="total-questions"
-                        class="font-bold">5</span></span>
+            <div class="game-header">
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Level</span>
+                        <span id="current-level" class="stat-value">1</span>
+                    </div>
+                    <div class="stat-divider">•</div>
+                    <div class="stat-item">
+                        <span class="stat-label">Soal</span>
+                        <span class="stat-value">
+                            <span id="current-question">1</span> / <span id="total-questions">5</span>
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <!-- Sentence Display Area -->
-            <div id="sentence-display" class="sentence-display">
-                <span class="instruction-text">Klik kata-kata di bawah untuk menyusun kalimat</span>
+            <div class="content-section">
+                <div id="sentence-display" class="sentence-display">
+                    <span class="instruction-text">Klik kata-kata di bawah untuk menyusun kalimat</span>
+                </div>
             </div>
 
+            <!-- Video akan muncul dinamis setelah jawaban -->
+
             <!-- Clear Button -->
-            <button id="clear-btn" class="clear-button hidden" onclick="clearSentence()">
-                🗑️ Bersihkan
-            </button>
+            <div class="content-section">
+                <button id="clear-btn" class="clear-button hidden" onclick="clearSentence()">
+                    🗑️ Bersihkan
+                </button>
+            </div>
 
             <!-- Word Options -->
-            <div id="words-container" class="words-grid">
-                <!-- Words will be populated by JavaScript -->
+            <div class="content-section">
+                <div id="words-container" class="words-grid">
+                    <!-- Words will be populated by JavaScript -->
+                </div>
             </div>
 
             <!-- Check Answer Button -->
-            <button id="check-btn" class="button-register w-full mt-6 hidden" onclick="checkAnswer()">
-                ✅ Periksa Jawaban
-            </button>
+            <div class="action-section">
+                <button id="check-btn" class="btn-primary hidden" onclick="checkAnswer()">
+                    <span class="btn-icon">✅</span>
+                    <span class="btn-text">Periksa Jawaban</span>
+                </button>
+            </div>
 
             <!-- Next Button -->
             <button id="next-btn" class="button-register w-full hidden" onclick="nextQuestion()">
@@ -1019,6 +1325,50 @@
             }
         ];
 
+        // ========== VIDEO PLAYER FUNCTIONS ==========
+        // Update embedded video based on current question
+        function updateHelpVideo() {
+            const video = document.getElementById('help-video-embed');
+            const source = document.getElementById('video-source-embed');
+            const title = document.getElementById('video-title-embed');
+
+            if (!video || !source || !title || !activeQuestions[currentIndex]) return;
+
+            // Map video berdasarkan kalimat yang akan disusun
+            const currentQ = activeQuestions[currentIndex];
+            let videoSrc = '';
+            let videoTitle = '';
+
+            // Video mapping berdasarkan correct sentence
+            if (currentQ.correct.includes("Budi Beli Apel")) {
+                videoSrc = '{{ asset('video/susun_kata/budi_beli_aple.mp4') }}';
+                videoTitle = '';
+            } else if (currentQ.correct.includes("Ibu Beli Labu")) {
+                videoSrc = '{{ asset('video/susun_kata/ibu_beli_labu.mp4') }}';
+                videoTitle = '';
+            } else if (currentQ.correct.includes("Kasur Aku Rusak")) {
+                videoSrc = '{{ asset('video/susun_kata/kasur_aku_rusak.mp4') }}';
+                videoTitle = '';
+            } else if (currentQ.correct.includes("Kata Baku")) {
+                videoSrc = '{{ asset('video/susun_kata/kata_baku_di_buku.mp4') }}';
+                videoTitle = '';
+            } else if (currentQ.correct.includes("Nama Mama")) {
+                videoSrc = '{{ asset('video/susun_kata/nama_mama_saya_nana.mp4') }}';
+                videoTitle = '';
+            } else {
+                // Default fallback
+                videoSrc = '{{ asset('video/susun_kata/budi_beli_aple.mp4') }}';
+                videoTitle = '';
+            }
+
+            // Update video
+            source.src = videoSrc;
+            title.textContent = videoTitle;
+            video.load();
+
+            console.log('Updated help video:', videoTitle, videoSrc);
+        }
+
         // Game state
         let currentIndex = 0;
         let score = 0;
@@ -1049,6 +1399,15 @@
         function initGame() {
             console.log('Initializing word sorting game...');
 
+            // Check DOM elements pertama
+            console.log('DOM elements check:', {
+                elGameCard: !!elGameCard,
+                elScoreArea: !!elScoreArea,
+                elFeedbackArea: !!elFeedbackArea,
+                elFeedbackText: !!elFeedbackText,
+                elMaskot: !!elMaskot
+            });
+
             // Reset game state
             currentIndex = 0;
             score = 0;
@@ -1059,7 +1418,9 @@
 
             // Setup questions - sequential dari level 1-5
             activeQuestions = GAME_DATA.slice(); // Copy semua soal
-            elTotalQ.textContent = activeQuestions.length;
+            if (elTotalQ) {
+                elTotalQ.textContent = activeQuestions.length;
+            }
 
             // Show welcome screen
             showWelcomeScreen();
@@ -1092,8 +1453,21 @@
 
         // Show welcome screen
         function showWelcomeScreen() {
+            console.log('showWelcomeScreen called');
+
             const elWelcomeScreen = document.getElementById('welcome-screen');
             const elStartBtn = document.getElementById('start-game-btn');
+
+            // Debug log
+            console.log('Welcome screen elements:', {
+                elWelcomeScreen: !!elWelcomeScreen,
+                elStartBtn: !!elStartBtn
+            });
+
+            if (!elWelcomeScreen || !elStartBtn) {
+                console.error('Missing welcome screen elements');
+                return;
+            }
 
             // Reset display
             elWelcomeScreen.classList.remove('hidden');
@@ -1104,18 +1478,45 @@
             // Welcome sequence - HAPUS audio welcome
             // Cukup tampil visual saja, tanpa suara welcome
 
-            // Setup start button
-            elStartBtn.onclick = () => {
+            // Setup start button dengan debug
+            elStartBtn.onclick = (event) => {
+                console.log('Start button clicked!', event);
+                event.preventDefault();
                 startGame();
             };
+
+            // Backup: event listener
+            elStartBtn.addEventListener('click', function(event) {
+                console.log('Start button listener triggered');
+                event.preventDefault();
+                startGame();
+            });
         }
 
         // Start the actual game
         function startGame() {
+            console.log('startGame called');
+
             const elWelcomeScreen = document.getElementById('welcome-screen');
             const elStartBtn = document.getElementById('start-game-btn');
             const elCountdownOverlay = document.getElementById('countdown-overlay');
             const elCountdownText = document.getElementById('countdown-text');
+
+            // Debug log
+            console.log('Elements found:', {
+                elWelcomeScreen: !!elWelcomeScreen,
+                elStartBtn: !!elStartBtn,
+                elCountdownOverlay: !!elCountdownOverlay,
+                elCountdownText: !!elCountdownText,
+                elGameCard: !!elGameCard,
+                elFeedbackArea: !!elFeedbackArea
+            });
+
+            // Error handling
+            if (!elWelcomeScreen || !elStartBtn || !elCountdownOverlay || !elCountdownText) {
+                console.error('Missing elements for startGame');
+                return;
+            }
 
             // Hide welcome screen
             elWelcomeScreen.classList.add('hidden');
@@ -1155,6 +1556,16 @@
                             // Reset feedback
                             setFeedback('neutral', 'Susun kata-kata menjadi kalimat yang benar!');
 
+                            // Remove existing video containers saat game start
+                            const existingVideos = document.querySelectorAll(
+                                '#video-container, .help-video-container');
+                            existingVideos.forEach(video => {
+                                if (video.id !==
+                                    'help-video-embed') { // Keep template elements
+                                    video.remove();
+                                }
+                            });
+
                             // Start the actual game IMMEDIATELY
                             loadQuestion();
                         }, 1000);
@@ -1176,6 +1587,12 @@
             // Update UI Info
             elLevel.textContent = q.level;
             elCurrentQ.textContent = currentIndex + 1;
+
+            // Remove existing video container saat start pertanyaan baru
+            const existingVideoContainer = document.getElementById('video-container');
+            if (existingVideoContainer) {
+                existingVideoContainer.remove();
+            }
 
             // Reset sentence and buttons
             currentSentence = [];
@@ -1426,11 +1843,26 @@
 
             if (userAnswer === q.correct) {
                 score++;
+
+                // Add success background effect
+                const gameContainer = document.querySelector('.game-container');
+                gameContainer.classList.add('success-shake');
+                setTimeout(() => {
+                    gameContainer.classList.remove('success-shake');
+                }, 600);
+
                 setFeedback('correct', 'Tepat sekali! Susunan kata benar!');
-                // HAPUS audio maskot - cukup visual feedback
+                showVideoAfterAnswer();
             } else {
+                // Add error background effect  
+                const gameContainer = document.querySelector('.game-container');
+                gameContainer.classList.add('error-shake');
+                setTimeout(() => {
+                    gameContainer.classList.remove('error-shake');
+                }, 600);
+
                 setFeedback('wrong', `Belum tepat. Jawaban yang benar: "${q.correct}"`);
-                // HAPUS audio maskot - cukup visual feedback
+                showVideoAfterAnswer();
             }
 
             elCheckBtn.classList.add('hidden');
@@ -1443,7 +1875,77 @@
             }, 500);
         }
 
+        function showVideoAfterAnswer() {
+            const currentQ = activeQuestions[currentIndex];
+            let explanationText = '';
+            let videoSrc = '';
+            let videoTitle = '';
+
+            // Set explanation text dan video source berdasarkan kalimat
+            if (currentQ.correct.includes("Budi Beli Apel")) {
+                videoSrc = '{{ asset('video/susun_kata/budi_beli_aple.mp4') }}';
+                videoTitle = 'Video Penjelasan';
+                explanationText = 'Jawaban: "Budi Beli Apel"';
+            } else if (currentQ.correct.includes("Ibu Beli Labu")) {
+                videoSrc = '{{ asset('video/susun_kata/ibu_beli_labu.mp4') }}';
+                videoTitle = 'Video Penjelasan';
+                explanationText = 'Jawaban: "Ibu Beli Labu"';
+            } else if (currentQ.correct.includes("Kasur Aku Rusak")) {
+                videoSrc = '{{ asset('video/susun_kata/kasur_aku_rusak.mp4') }}';
+                videoTitle = 'Video Penjelasan';
+                explanationText = 'Jawaban: "Kasur Aku Rusak"';
+            } else if (currentQ.correct.includes("Kata Baku")) {
+                videoSrc = '{{ asset('video/susun_kata/kata_baku_di_buku.mp4') }}';
+                videoTitle = 'Video Penjelasan';
+                explanationText = 'Jawaban: "Kata Baku di Buku"';
+            } else if (currentQ.correct.includes("Nama Mama")) {
+                videoSrc = '{{ asset('video/susun_kata/nama_mama_saya_nana.mp4') }}';
+                videoTitle = 'Video Penjelasan';
+                explanationText = 'Jawaban: "Nama Mama Saya Nana"';
+            }
+
+            // Create video container dinamis
+            const videoHTML = `
+                <div id="video-container" class="content-section" style="margin-top: 20px; animation: fadeInUp 0.5s ease-out; max-width: 100%; box-sizing: border-box;">
+                    <div class="help-video-container" style="padding: 12px 16px;">
+                        <div class="explanation-text" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 10px 12px; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(59, 130, 246, 0.3); text-align: center;">
+                            <h4 style="color: #1e40af; margin: 0 0 4px 0; font-size: 0.95rem; font-weight: 600;">Penjelasan Soal & Jawaban</h4>
+                            <p style="color: #1e293b; margin: 0; font-size: 0.85rem; font-weight: 500;">${explanationText}</p>
+                        </div>
+                        <div class="video-title" style="font-size: 1rem; margin-bottom: 8px;">${videoTitle}</div>
+                        <video class="help-video" controls preload="metadata" style="border-radius: 8px; width: 100%; height: auto; max-height: 250px;">
+                            <source src="${videoSrc}" type="video/mp4">
+                            Browser Anda tidak mendukung video HTML5.
+                        </video>
+                    </div>
+                </div>
+            `;
+
+            // Insert video container setelah game elements
+            const gameCard = document.querySelector('.card-register');
+            if (gameCard) {
+                gameCard.insertAdjacentHTML('afterend', videoHTML);
+
+                // Scroll to video
+                setTimeout(() => {
+                    const videoContainer = document.getElementById('video-container');
+                    if (videoContainer) {
+                        videoContainer.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                    }
+                }, 300);
+            }
+        }
+
         function nextQuestion() {
+            // Remove video container saat pindah ke soal berikutnya
+            const videoContainer = document.getElementById('video-container');
+            if (videoContainer) {
+                videoContainer.remove();
+            }
+
             // Prevent multiple clicks
             if (isAnimating) {
                 return;

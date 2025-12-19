@@ -1,36 +1,35 @@
 /**
- * Font OpenDyslexic - SOLUSI SEMENTARA MENGGUNAKAN CDN
- * Local fonts tidak bisa diakses di Vercel, gunakan CDN eksternal dulu
+ * Font Test dan OpenDyslexic - Sesuai Artikel Debug Strategy
+ * Menggunakan Google Font test dulu, kemudian local fonts
  */
-
-/* Impor OpenDyslexic dari CDN eksternal yang reliable */
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 
 /* TEST: Google Font verification (temporary) */
 .font-test-google {
     font-family: 'Open Sans', sans-serif !important;
 }
 
-/* FALLBACK: Jika CDN gagal, gunakan @font-face dengan URL absolut CDN */
+/* Deklarasi font kustom Regular - NAMA HARUS SAMA PERSIS */
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@master/web/OpenDyslexic-Regular.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@master/web/OpenDyslexic-Regular.woff') format('woff');
+    src: url('/fonts/OpenDyslexic-Regular.woff2') format('woff2'),
+         url('/fonts/OpenDyslexic-Regular.woff') format('woff'),
+         url('/fonts/OpenDyslexic-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: swap; /* Penting untuk kinerja */
 }
 
+/* Deklarasi font kustom Bold - NAMA HARUS SAMA PERSIS */
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@master/web/OpenDyslexic-Bold.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@master/web/OpenDyslexic-Bold.woff') format('woff');
+    src: url('/fonts/OpenDyslexic-Bold.woff') format('woff'),
+         url('/fonts/OpenDyslexic-Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
-/* PRIORITAS CSS - Menggunakan font yang pasti accessible di semua device */
+/* PRIORITAS CSS - Target semua elemen text dengan !important untuk debugging */
 body, h1, h2, h3, h4, h5, h6, p, span, li, a, div, td, th, label, input, textarea, select {
-    font-family: 'Atkinson Hyperlegible', 'OpenDyslexic', 'Open Sans', 'Comic Sans MS', 'Trebuchet MS', Arial, sans-serif !important;
+    font-family: 'OpenDyslexic', 'Open Sans', 'Comic Sans MS', Arial, sans-serif !important;
 }
