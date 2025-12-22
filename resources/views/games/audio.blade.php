@@ -36,8 +36,8 @@
         }
 
         /* =========================================================================
-                       1. CSS KUSTOM SESUAI PERMINTAAN (Card & Button)
-                       ========================================================================= */
+                           1. CSS KUSTOM SESUAI PERMINTAAN (Card & Button)
+                           ========================================================================= */
         .game-container {
             display: flex;
             flex-direction: column;
@@ -140,8 +140,8 @@
         }
 
         /* =========================================================================
-                       2. LAYOUT & FEEDBACK BARU (Maskot di Samping Pesan)
-                       ========================================================================= */
+                           2. LAYOUT & FEEDBACK BARU (Maskot di Samping Pesan)
+                           ========================================================================= */
         .image-box {
             width: 200px;
             height: 200px;
@@ -185,6 +185,77 @@
 
         .image-box.loaded::before {
             display: none;
+        }
+
+        /* EMBEDDED VIDEO PLAYER - Audio Game Style */
+        .help-video-container {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 1rem 0;
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .help-video-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .help-video {
+            width: 100%;
+            height: 200px;
+            border-radius: 16px;
+            background: #000;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+            overflow: hidden;
+        }
+
+        .video-title {
+            text-align: center;
+            color: #1e293b;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        /* Mobile Responsive untuk Video */
+        @media (max-width: 768px) {
+            .help-video-container {
+                padding: 16px;
+                border-radius: 16px;
+                margin: 0.75rem 0;
+            }
+
+            .help-video {
+                height: 160px;
+                border-radius: 12px;
+            }
+
+            .video-title {
+                font-size: 0.9rem;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .help-video-container {
+                padding: 14px;
+                border-radius: 14px;
+            }
+
+            .help-video {
+                height: 140px;
+                border-radius: 10px;
+            }
+
+            .video-title {
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+            }
         }
 
         .sound-button {
@@ -1153,6 +1224,15 @@
 
             <div id="image-placeholder" class="image-box"></div>
 
+            <!-- Embedded Help Video -->
+            <div id="video-container" class="help-video-container" style="display: none;">
+                <div id="video-title-embed" class="video-title">📹 Video Penjelasan Kata</div>
+                <video id="help-video-embed" class="help-video" controls preload="metadata">
+                    <source id="video-source-embed" src="" type="video/mp4">
+                    Browser Anda tidak mendukung video HTML5.
+                </video>
+            </div>
+
             <button id="sound-btn" class="sound-button">
                 🔊
             </button>
@@ -1323,6 +1403,115 @@
             synth.speak(utterance);
         }
 
+        // ========== VIDEO PLAYER FUNCTIONS ==========
+        // Update embedded video based on current word
+        function updateHelpVideo() {
+            const video = document.getElementById('help-video-embed');
+            const source = document.getElementById('video-source-embed');
+            const title = document.getElementById('video-title-embed');
+            const videoContainer = document.getElementById('video-container');
+
+            if (!video || !source || !title || !videoContainer || !activeQuestions[currentIndex]) return;
+
+            const q = activeQuestions[currentIndex];
+            const wordLower = q.correct.toLowerCase();
+
+            let videoSrc = '';
+            let videoTitle = '';
+
+            // Video mapping berdasarkan kata yang benar (sesuai nama file di audiovisuals)
+            switch (wordLower) {
+                case 'ikan':
+                    videoSrc = '{{ asset('videos/audiovisuals/ikan.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'ayam':
+                    videoSrc = '{{ asset('videos/audiovisuals/ayam.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'sapi':
+                    videoSrc = '{{ asset('videos/audiovisuals/sapi.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'meja':
+                    videoSrc = '{{ asset('videos/audiovisuals/meja.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'batu':
+                    videoSrc = '{{ asset('videos/audiovisuals/batu.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'raja':
+                    videoSrc = '{{ asset('videos/audiovisuals/raja.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'baju':
+                    videoSrc = '{{ asset('videos/audiovisuals/baju.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'paku':
+                    videoSrc = '{{ asset('videos/audiovisuals/paku.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'dadu':
+                    videoSrc = '{{ asset('videos/audiovisuals/dadu.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'kucing':
+                    videoSrc = '{{ asset('videos/audiovisuals/kucing.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'pancing':
+                    videoSrc = '{{ asset('videos/audiovisuals/pancing.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'kering':
+                    videoSrc = '{{ asset('videos/audiovisuals/kering.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'kotak':
+                    videoSrc = '{{ asset('videos/audiovisuals/kotak.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'katak':
+                    videoSrc = '{{ asset('videos/audiovisuals/katak.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                case 'kapak':
+                    videoSrc = '{{ asset('videos/audiovisuals/kapak.mp4') }}';
+                    videoTitle = 'Video Penjelasan';
+                    break;
+                default:
+                    // Hide video for unknown words
+                    videoContainer.style.display = 'none';
+                    return;
+            }
+
+            // Show video container
+            videoContainer.style.display = 'block';
+
+            // Update video
+            source.src = videoSrc;
+            title.textContent = videoTitle;
+            video.load();
+
+            // Add error handling for video loading
+            video.addEventListener('error', function() {
+                console.warn('Video failed to load:', videoSrc);
+                videoContainer.style.display = 'none';
+            }, {
+                once: true
+            });
+
+            video.addEventListener('loadedmetadata', function() {
+                console.log('Video loaded successfully:', videoSrc);
+            }, {
+                once: true
+            });
+
+            console.log('Updated help video for word:', q.correct, '-', videoTitle, videoSrc);
+        }
+
         // --- LOGIKA UTAMA ---
 
         function initGame() {
@@ -1369,6 +1558,12 @@
             elGameCard.classList.add('hidden');
             elFeedbackArea.classList.remove('show');
 
+            // Reset video container
+            const videoContainer = document.getElementById('video-container');
+            if (videoContainer) {
+                videoContainer.style.display = 'none';
+            }
+
             // LANGSUNG ke countdown tanpa welcome screen
             startGame();
         }
@@ -1383,6 +1578,12 @@
             elGameCard.classList.add('hidden');
             elScoreArea.classList.add('hidden');
             elFeedbackArea.classList.remove('show');
+
+            // Reset video container
+            const videoContainer = document.getElementById('video-container');
+            if (videoContainer) {
+                videoContainer.style.display = 'none';
+            }
 
             // Welcome sequence - HAPUS audio welcome
             // Cukup tampil visual saja, tanpa suara welcome
@@ -1479,12 +1680,18 @@
                 elImg.style.backgroundImage = `url('${imageUrl}')`;
                 elImg.classList.add('loaded');
                 console.log('Image loaded successfully:', imageUrl);
+
+                // Update video setelah gambar berhasil dimuat
+                updateHelpVideo();
             };
             testImg.onerror = function() {
                 console.error('Image failed to load:', imageUrl);
                 elImg.classList.remove('loading');
                 elImg.style.backgroundImage = '';
                 elImg.classList.remove('loaded');
+
+                // Tetap update video meskipun gambar gagal dimuat
+                updateHelpVideo();
             };
             testImg.src = imageUrl;
 
